@@ -1,0 +1,112 @@
+#!/usr/bin/env node
+
+// mock it to drop output from ncss
+var output = process.stdout.write.bind(process.stdout);
+process.stdout.write = function(data) {
+  if (data == '.' || data == 'F')
+    output(data);
+};
+
+var CleanCSS = require('clean-css');
+var csso = require('csso');
+var ncss = require('ncss');
+var ycssmin = require('ycssmin');
+
+var Table = require('cli-table');
+var fs = require('fs');
+var path = require('path');
+var colors = require('colors');
+
+// MINIFIERS
+
+var minifiers = {
+  'clean-css': function(source) {
+    return new CleanCSS().minify(source);
+  },
+  'clean-css (advanced off)': function(source) {
+    return new CleanCSS({ noAdvanced: true }).minify(source);
+  },
+  'csso': csso.justDoIt,
+  'csso (reordering off)': function(source) {
+    return csso.justDoIt(source, true);
+  },
+  'ncss': ncss,
+  'ycssmin': ycssmin.cssmin
+};
+var activeMinifiers = [];
+var only = process.argv[2] == '--only' ?
+  new RegExp('.*(' + process.argv[3].replace(/,/g, '|') + ').*') :
+  /.+/;
+
+for (var name in minifiers) {
+  if (only.test(name))
+    activeMinifiers.push(name);
+}
+
+// RUN BENCHMARK
+var minifierNames = activeMinifiers.slice(0);
+minifierNames.unshift('');
+
+var results = new Table({ head: minifierNames });
+
+var comparator = function(n1, n2) {
+  return n1 > n2 ? 1 : -1;
+};
+var benchmark = function(filename) {
+  if (filename.indexOf('.css') == -1)
+    return;
+
+  var source = fs.readFileSync(path.join('data', filename), 'utf8');
+  var row = [filename + ' (' + source.length + ' bytes)'];
+  var sizes = [];
+  var times = [];
+
+  activeMinifiers.forEach(function(name) {
+    try {
+      var start = process.hrtime();
+      var minified = minifiers[name](source);
+      var itTook = process.hrtime(start);
+      var took = ~~(1000 * itTook[0] + itTook[1] / 1000000.0);
+
+      sizes.push(minified.length);
+      times.push(took);
+      row.push({ size: minified.length, time: took });
+      process.stdout.write('.');
+    } catch (e) {
+      row.push({ size: -1, time: -1 });
+      process.stdout.write('F');
+    }
+  });
+
+  sizes = sizes.sort(comparator);
+  times = times.sort(comparator);
+
+  row = row.map(function(result) {
+    if (result.time == -1)
+      return 'error'.red.inverse;
+    if (typeof result == 'string')
+      return result;
+
+    var size = '' + result.size;
+    if (result.size == sizes[sizes.length - 1] && sizes.length > 1 && sizes[0] != sizes[sizes.length - 1])
+      size = size.red
+    if (result.size == sizes[0])
+      size = size.green
+
+    var time = '' + result.time;
+    if (result.time == times[times.length - 1] && times.length > 1 && times[0] != times[times.length - 1])
+      time = time.red
+    if (result.time == times[0])
+      time = time.green
+
+    return size + ' bytes (' + time + ' ms)';
+  });
+
+  results.push(row);
+};
+
+fs.readdirSync('data').forEach(benchmark);
+
+output('\n');
+output(results.toString());
+output('\n');
