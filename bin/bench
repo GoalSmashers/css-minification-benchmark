@@ -48,7 +48,7 @@ var styled = function(value, color) {
     color = '#0b0';
 
   return asHTML ?
-    '<span style=\'color:' + color + ';font-weight:700\'>' + value + '</span>' :
+    '<span style="color:' + color + ';font-weight:700">' + value + '</span>' :
     value[color];
 };
 
@@ -60,7 +60,7 @@ var minifierNames = activeMinifiers.slice(0).map(function(name) {
   var repository = packageDefinition.repository.url.replace('git://', 'http://');
 
   if (asHTML)
-    return '<a href=\'' + repository + '\'>' + name + ' - ' + version + '</a>';
+    return '<a href="' + repository + '">' + name + ' - ' + version + '</a>';
   else
     return name + ' - ' + version;
 });
