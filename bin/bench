@@ -44,11 +44,9 @@ for (var name in minifiers) {
 
 // FORMATTING
 var styled = function(value, color) {
-  if (asHTML && color == 'green')
-    color = '#0b0';
 
   return asHTML ?
-    '<span style="color:' + color + ';font-weight:700">' + value + '</span>' :
+    '<span class="' + color + '">' + value + '</span>' :
     value[color];
 };
 
