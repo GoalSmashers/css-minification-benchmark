@@ -2,10 +2,7 @@
 
 // mock it to drop output from ncss
 var output = process.stdout.write.bind(process.stdout);
-process.stdout.write = function(data) {
-  if (data == '.' || data == 'F')
-    output(data);
-};
+process.stdout.write = function() {};
 
 var CleanCSS = require('clean-css');
 var csso = require('csso');
@@ -13,6 +10,7 @@ var ncss = require('ncss');
 var ycssmin = require('ycssmin');
 
 var Table = require('cli-table');
+var HTMLTable = require('../lib/html-table');
 var fs = require('fs');
 var path = require('path');
 var colors = require('colors');
@@ -21,6 +19,7 @@ var colors = require('colors');
 var only = process.argv.indexOf('--only') > -1 ?
   new RegExp('.*(' + process.argv[process.argv.indexOf('--only') + 1].replace(/,/g, '|') + ').*') :
   /.+/;
+var asHTML = process.argv.indexOf('--html') > -1;
 
 // MINIFIERS
 var minifiers = {
@@ -43,11 +42,22 @@ for (var name in minifiers) {
     activeMinifiers.push(name);
 }
 
+// FORMATTING
+var styled = function(value, color) {
+  if (asHTML && color == 'green')
+    color = '#0b0';
+
+  return asHTML ?
+    '<span style=\'color:' + color + ';font-weight:700\'>' + value + '</span>' :
+    value[color];
+};
+
 // RUN BENCHMARK
 var minifierNames = activeMinifiers.slice(0);
 minifierNames.unshift('');
 
-var results = new Table({ head: minifierNames });
+var tableClass = asHTML ? HTMLTable : Table;
+var results = new tableClass({ head: minifierNames });
 
 var comparator = function(n1, n2) {
   return n1 > n2 ? 1 : -1;
@@ -71,10 +81,10 @@ var benchmark = function(filename) {
       sizes.push(minified.length);
       times.push(took);
       row.push({ size: minified.length, time: took });
-      process.stdout.write('.');
+      process.stderr.write('.');
     } catch (e) {
       row.push({ size: -1, time: -1 });
-      process.stdout.write('F');
+      process.stderr.write('F');
     }
   });
 
@@ -83,21 +93,21 @@ var benchmark = function(filename) {
 
   row = row.map(function(result) {
     if (result.time == -1)
-      return 'error'.red.inverse;
+      return styled('error', 'red');
     if (typeof result == 'string')
       return result;
 
     var size = '' + result.size;
     if (result.size == sizes[sizes.length - 1] && sizes.length > 1 && sizes[0] != sizes[sizes.length - 1])
-      size = size.red
+      size = styled(size, 'red');
     if (result.size == sizes[0])
-      size = size.green
+      size = styled(size, 'green');
 
     var time = '' + result.time;
     if (result.time == times[times.length - 1] && times.length > 1 && times[0] != times[times.length - 1])
-      time = time.red
+      time = styled(time, 'red');
     if (result.time == times[0])
-      time = time.green
+      time = styled(time, 'green');
 
     return size + ' bytes (' + time + ' ms)';
   });

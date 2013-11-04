@@ -21,6 +21,8 @@ Most of the time either `clean-css` or `csso` comes first. Although it depends o
 
 Clone the repository first then run `./bin/bench`. That's it!
 
+If you prefer to see results without cloning the repo here are [the most recent ones](https://rawgithub.com/GoalSmashers/css-minification-benchmark/master/results.html).
+
 ### How can I test my CSS file?
 
 Just copy your file to `data` directory (make sure filename ends with `.css`) and re-run the benchmark.
