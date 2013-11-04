@@ -11,6 +11,9 @@
     "minification",
     "benchmark"
   ],
+  "bugs": {
+    "url": "https://github.com/GoalSmashers/css-minification-benchmark/issues"
+  },
   "author": "Jakub Pawlowicz <jakub@goalsmashers.com>",
   "license": "MIT",
   "devDependencies": {
