@@ -53,7 +53,17 @@ var styled = function(value, color) {
 };
 
 // RUN BENCHMARK
-var minifierNames = activeMinifiers.slice(0);
+var minifierNames = activeMinifiers.slice(0).map(function(name) {
+  var packageName = name.split(' ')[0];
+  var packageDefinition = JSON.parse(fs.readFileSync(path.join('node_modules', packageName, 'package.json')));
+  var version = packageDefinition.version;
+  var repository = packageDefinition.repository.url.replace('git://', 'http://');
+
+  if (asHTML)
+    return '<a href=\'' + repository + '\'>' + name + ' - ' + version + '</a>';
+  else
+    return name + ' - ' + version;
+});
 minifierNames.unshift('');
 
 var tableClass = asHTML ? HTMLTable : Table;
