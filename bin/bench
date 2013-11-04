@@ -17,8 +17,12 @@ var fs = require('fs');
 var path = require('path');
 var colors = require('colors');
 
-// MINIFIERS
+// ARGUMENTS
+var only = process.argv.indexOf('--only') > -1 ?
+  new RegExp('.*(' + process.argv[process.argv.indexOf('--only') + 1].replace(/,/g, '|') + ').*') :
+  /.+/;
 
+// MINIFIERS
 var minifiers = {
   'clean-css': function(source) {
     return new CleanCSS().minify(source);
@@ -34,10 +38,6 @@ var minifiers = {
   'ycssmin': ycssmin.cssmin
 };
 var activeMinifiers = [];
-var only = process.argv[2] == '--only' ?
-  new RegExp('.*(' + process.argv[3].replace(/,/g, '|') + ').*') :
-  /.+/;
-
 for (var name in minifiers) {
   if (only.test(name))
     activeMinifiers.push(name);
