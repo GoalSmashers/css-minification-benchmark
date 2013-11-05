@@ -44,11 +44,9 @@ for (var name in minifiers) {
 
 // FORMATTING
 var styled = function(value, color) {
-  if (asHTML && color == 'green')
-    color = '#0b0';
 
   return asHTML ?
-    '<span style=\'color:' + color + ';font-weight:700\'>' + value + '</span>' :
+    '<span class="' + color + '">' + value + '</span>' :
     value[color];
 };
 
@@ -57,10 +55,10 @@ var minifierNames = activeMinifiers.slice(0).map(function(name) {
   var packageName = name.split(' ')[0];
   var packageDefinition = JSON.parse(fs.readFileSync(path.join('node_modules', packageName, 'package.json')));
   var version = packageDefinition.version;
-  var repository = packageDefinition.repository.url.replace('git://', 'http://');
+  var repository = packageDefinition.repository.url.replace('git://', 'https://');
 
   if (asHTML)
-    return '<a href=\'' + repository + '\'>' + name + ' - ' + version + '</a>';
+    return '<a href="' + repository + '">' + name + ' - ' + version + '</a>';
   else
     return name + ' - ' + version;
 });
