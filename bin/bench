@@ -13,7 +13,7 @@ var Table = require('cli-table');
 var HTMLTable = require('../lib/html-table');
 var fs = require('fs');
 var path = require('path');
-var colors = require('colors');
+require('colors');
 
 // ARGUMENTS
 var only = process.argv.indexOf('--only') > -1 ?
