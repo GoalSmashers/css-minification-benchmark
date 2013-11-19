@@ -2,20 +2,21 @@
   "name": "css-minification-benchmark",
   "version": "1.0.0",
   "description": "Benchmark of popular CSS minification tools.",
+  "author": "Jakub Pawlowicz <jakub@goalsmashers.com>",
+  "homepage": "https://github.com/GoalSmashers/css-minification-benchmark",
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/GoalSmashers/css-minification-benchmark.git"
+  },
+  "bugs": {
+    "url": "https://github.com/GoalSmashers/css-minification-benchmark/issues"
   },
   "keywords": [
     "css",
     "minification",
     "benchmark"
   ],
-  "bugs": {
-    "url": "https://github.com/GoalSmashers/css-minification-benchmark/issues"
-  },
-  "author": "Jakub Pawlowicz <jakub@goalsmashers.com>",
-  "license": "MIT",
   "devDependencies": {
     "clean-css": "2.0.x",
     "cli-table": "0.2.x",
