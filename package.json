@@ -18,6 +18,7 @@
     "benchmark"
   ],
   "scripts": {
+    "bench": "node ./bin/bench --html>results.html",
     "check": "jshint ./bin/bench ."
   },
   "devDependencies": {
