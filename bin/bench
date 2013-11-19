@@ -15,6 +15,8 @@ var fs = require('fs');
 var path = require('path');
 require('colors');
 
+var lineBreak = process.platform == 'win32' ? '\r\n' : '\n';
+
 // ARGUMENTS
 var only = process.argv.indexOf('--only') > -1 ?
   new RegExp('.*(' + process.argv[process.argv.indexOf('--only') + 1].replace(/,/g, '|') + ').*') :
@@ -84,7 +86,7 @@ var benchmark = function(filename) {
       var start = process.hrtime();
       var minified = minifiers[name](source);
       var itTook = process.hrtime(start);
-      var took = ~~(1000 * itTook[0] + itTook[1] / 1000000.0);
+      var took = ~~(1000 * itTook[0] + itTook[1] / 1000000);
 
       sizes.push(minified.length);
       times.push(took);
@@ -125,6 +127,6 @@ var benchmark = function(filename) {
 
 fs.readdirSync('data').forEach(benchmark);
 
-output('\n');
+output(lineBreak);
 output(results.toString());
-output('\n');
+output(lineBreak);
