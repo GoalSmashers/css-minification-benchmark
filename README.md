@@ -23,7 +23,7 @@ Clone the repository first then run `./bin/bench`. That's it!
 
 Note that on Windows you will need to do `node ./bin/bench`
 
-If you prefer to see results without cloning the repo here are [the most recent ones](https://rawgithub.com/GoalSmashers/css-minification-benchmark/master/results.html).
+If you prefer to see results without cloning the repo here are [the most recent ones](http://goalsmashers.github.io/css-minification-benchmark/).
 
 ### How can I test my CSS file?
 
