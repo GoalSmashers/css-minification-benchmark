@@ -59,7 +59,7 @@ var minifierNames = activeMinifiers.slice(0).map(function(name) {
   var homepage = packageDefinition.homepage;
   var version = packageDefinition.version;
 
-  if (asHTML)
+  if (asHTML && homepage)
     return '<a href="' + homepage + '">' + name + ' - ' + version + '</a>';
   else
     return name + ' - ' + version;
