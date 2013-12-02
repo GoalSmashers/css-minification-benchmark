@@ -1,0 +1,2091 @@
+/* ==========================================================================
+  Compass prefix support
+  ========================================================================== */
+/* ==========================================================================
+  Common variables
+  ========================================================================== */
+/**
+* 
+* DO NOT use these variables directly in components. 
+* Assign them to component specific variables
+*
+*/
+/* Colors */
+/* Border radius */
+/* ==========================================================================
+  Browser support
+  ========================================================================== */
+/* ==========================================================================
+  Component specific variables
+  ========================================================================== */
+/* Typography
+   ========================================================================== */
+/* Type Color */
+/* Grid
+   ========================================================================== */
+/* Link
+   ========================================================================== */
+/* Background
+   ========================================================================== */
+/* Box
+   ========================================================================== */
+/* Contour */
+/* Box foot */
+/* Divider
+   ========================================================================== */
+/* List
+   ========================================================================== */
+/* Table
+   ========================================================================== */
+/* Form
+   ========================================================================== */
+/* Button
+   ========================================================================== */
+/* Template
+   ========================================================================== */
+/* header */
+/* footer */
+/** 
+ * We are using most of Normalize CSS with these modifications:
+ * 
+ * Moved some of the typography styling to _typography.scss, unless it's something we think that should be set as default
+ * Removed list default margin, padding and list style
+ * 
+ */
+/* normalize.css v1.0.2 | MIT License | git.io/normalize */
+/* ==========================================================================
+   HTML5 display definitions
+   ========================================================================== */
+/*
+ * Corrects `block` display not defined in IE 6/7/8/9 and Firefox 3.
+ */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section,
+summary {
+  display: block;
+}
+
+/*
+ * Corrects `inline-block` display not defined in IE 6/7/8/9 and Firefox 3.
+ */
+audio,
+canvas,
+video {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+}
+
+/*
+ * Prevents modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/*
+ * Addresses styling for `hidden` attribute not present in IE 7/8/9, Firefox 3,
+ * and Safari 4.
+ * Known issue: no IE 6 support.
+ */
+[hidden] {
+  display: none;
+}
+
+/* ==========================================================================
+   Base
+   ========================================================================== */
+/*
+ * 1. Corrects text resizing oddly in IE 6/7 when body `font-size` is set using
+ *    `em` units.
+ * 2. Prevents iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ */
+html {
+  font-size: 100%;
+  /* 1 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+}
+
+/*
+ * Addresses margins handled incorrectly in IE 6/7.
+ */
+body {
+  margin: 0;
+}
+
+/* ==========================================================================
+   Links
+   ========================================================================== */
+/*
+ * Addresses `outline` inconsistency between Chrome and other browsers.
+ */
+a:focus {
+  outline: thin dotted;
+}
+
+/*
+ * Improves readability when focused and also mouse hovered in all browsers.
+ */
+a:active,
+a:hover {
+  outline: 0;
+}
+
+/* ==========================================================================
+   Typography
+   ========================================================================== */
+/*
+ * Addresses styling not present in IE 7/8/9, Safari 5, and Chrome.
+ */
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+/*
+ * Addresses style set to `bolder` in Firefox 3+, Safari 4/5, and Chrome.
+ */
+b,
+strong {
+  font-weight: bold;
+}
+
+/*
+ * Addresses styling not present in Safari 5 and Chrome.
+ */
+dfn {
+  font-style: italic;
+}
+
+/*
+ * Improves readability of pre-formatted text in all browsers.
+ */
+pre {
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+/*
+ * Addresses CSS quotes not supported in IE 6/7.
+ */
+q {
+  quotes: none;
+}
+
+/*
+ * Addresses `quotes` property not supported in Safari 4.
+ */
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+/*
+ * Addresses inconsistent and variable font size in all browsers.
+ */
+small {
+  font-size: 80%;
+}
+
+/*
+ * Prevents `sub` and `sup` affecting `line-height` in all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  top: -0.5em;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+/* ==========================================================================
+   Lists
+   ========================================================================== */
+dl,
+dt,
+dd,
+menu,
+ol,
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+/* ==========================================================================
+   Embedded content
+   ========================================================================== */
+/*
+ * 1. Removes border when inside `a` element in IE 6/7/8/9 and Firefox 3.
+ * 2. Improves image quality when scaled in IE 7.
+ */
+img {
+  border: 0;
+  /* 1 */
+  -ms-interpolation-mode: bicubic;
+  /* 2 */
+}
+
+/*
+ * Corrects overflow displayed oddly in IE 9.
+ */
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* ==========================================================================
+   Figures
+   ========================================================================== */
+/*
+ * Addresses margin not present in IE 6/7/8/9, Safari 5, and Opera 11.
+ */
+figure {
+  margin: 0;
+}
+
+/* ==========================================================================
+   Forms
+   ========================================================================== */
+/*
+ * Corrects margin displayed oddly in IE 6/7.
+ */
+form {
+  margin: 0;
+}
+
+/*
+ * Define consistent border, margin, and padding.
+ */
+/*
+ * [OOCSS] - removed border bottom styling. Set margin and padding to 0.
+ */
+fieldset {
+  margin: 0;
+  padding: 0;
+}
+
+/*
+ * 1. Corrects color not being inherited in IE 6/7/8/9.
+ * 2. Corrects text not wrapping in Firefox 3.
+ * 3. Corrects alignment displayed oddly in IE 6/7.
+ */
+legend {
+  border: 0;
+  /* 1 */
+  padding: 0;
+  white-space: normal;
+  /* 2 */
+  *margin-left: -7px;
+  /* 3 */
+}
+
+/*
+ * 1. Corrects font size not being inherited in all browsers.
+ * 2. Addresses margins set differently in IE 6/7, Firefox 3+, Safari 5,
+ *    and Chrome.
+ * 3. Improves appearance and consistency in all browsers.
+ */
+button,
+input,
+select,
+textarea {
+  font-size: 100%;
+  /* 1 */
+  margin: 0;
+  /* 2 */
+  vertical-align: baseline;
+  /* 3 */
+  *vertical-align: middle;
+  /* 3 */
+}
+
+/*
+ * Addresses Firefox 3+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+button,
+input {
+  line-height: normal;
+}
+
+/*
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Corrects inability to style clickable `input` types in iOS.
+ * 3. Improves usability and consistency of cursor style between image-type
+ *    `input` and others.
+ * 4. Removes inner spacing in IE 7 without affecting normal text inputs.
+ *    Known issue: inner spacing remains in IE 6.
+ */
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+  cursor: pointer;
+  /* 3 */
+  *overflow: visible;
+  /* 4 */
+}
+
+/*
+ * Re-set default cursor for disabled elements.
+ */
+button[disabled],
+input[disabled] {
+  cursor: default;
+}
+
+/*
+ * 1. Addresses box sizing set to content-box in IE 8/9.
+ * 2. Removes excess padding in IE 8/9.
+ * 3. Removes excess padding in IE 7.
+ *    Known issue: excess padding remains in IE 6.
+ */
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+  *height: 13px;
+  /* 3 */
+  *width: 13px;
+  /* 3 */
+}
+
+/*
+ * 1. Addresses `appearance` set to `searchfield` in Safari 5 and Chrome.
+ * 2. Addresses `box-sizing` set to `border-box` in Safari 5 and Chrome
+ *    (include `-moz` to future-proof).
+ */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  /* 2 */
+  box-sizing: content-box;
+}
+
+/*
+ * Removes inner padding and search cancel button in Safari 5 and Chrome
+ * on OS X.
+ */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/*
+ * Removes inner padding and border in Firefox 3+.
+ */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/*
+ * 1. Removes default vertical scrollbar in IE 6/7/8/9.
+ * 2. Improves readability and alignment in all browsers.
+ */
+textarea {
+  overflow: auto;
+  /* 1 */
+  vertical-align: top;
+  /* 2 */
+}
+
+/* ==========================================================================
+   Tables
+   ========================================================================== */
+/*
+ * Remove most spacing between table cells.
+ */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+th {
+  font-weight: normal;
+}
+
+/* ==========================================================================
+  Compass Helpers
+  ========================================================================== */
+/* ==========================================================================
+   Mixin and functions
+   ========================================================================== */
+/* 
+ * clearfix     used project wide to clear floats and create a new formatting context
+ * usage      @include clearfix-me(<empty|overflow|facebook|micro|stubborn>)
+ * $clearfix-method sets default method
+ */
+.media > .mediaBody {
+  display: table-cell;
+  vertical-align: top;
+  width: 10000px !important;
+  *display: block;
+  *zoom: 1;
+  *width: auto !important;
+}
+
+.line, .box, .box .boxHead,
+.box .boxFoot, .media, .form .field {
+  zoom: 1;
+}
+.line:before, .box:before, .box .boxHead:before,
+.box .boxFoot:before, .media:before, .form .field:before, .line:after, .box:after, .box .boxHead:after,
+.box .boxFoot:after, .media:after, .form .field:after {
+  content: " ";
+  display: table;
+}
+.line:after, .box:after, .box .boxHead:after,
+.box .boxFoot:after, .media:after, .form .field:after {
+  clear: both;
+}
+
+/**
+ * Convert px to em
+ *
+ * @param $elFontSize - the element font size in pixel e.g. you want to set margin on your text, 
+ * and font size on your text is equivalent to 14px, then your context is 14px.
+ *
+ * @param $values - the values in pixel you want to convert. 
+ * You can pass in an array of values. Each value separated by space.
+ *
+ * e.g. margin: pxToEm(16px 20px 20px 16px, 16px);
+ * 
+ */
+/** 
+ * Make elements into inline-block with IE7 fix. Use it only when you need to make a
+ * block level element inline-block. Elements that are inline by default won't need the 
+ * IE7 fix.
+ * 
+ * Usage            @extend %nlineBlockFix;
+ * 
+ */
+.listInline > li, .listInlineDivider li, .form .fieldGroupInline > li {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+}
+
+/**
+ * Convert font-size from px to rem with px fallback
+ *
+ * @param $size - the value in pixel you want to convert
+ *
+ * e.g. p {@include fontSize(12px);}
+ * 
+ */
+/* ==========================================================================
+   Utility classes
+   ========================================================================== */
+/**
+* @desc         Aligning text
+* @name         textAlign
+* @author       
+* @tested       
+* @requires     
+*/
+.txtC, .table table .txtC, .table table tr .txtC {
+  text-align: center;
+}
+
+.txtL, .table table .txtL, .table table tr .txtL {
+  text-align: left;
+}
+
+.txtR, .table table .txtR, .table table tr .txtR {
+  text-align: right;
+}
+
+.txtT, .table table .txtT, .table table tr .txtT {
+  vertical-align: top;
+}
+
+.txtB, .table table .txtB, .table table tr .txtB {
+  vertical-align: bottom;
+}
+
+.txtM, .table table .txtM, .table table tr .txtM {
+  vertical-align: middle;
+}
+
+/* ==========================================================================
+   Hide
+   ========================================================================== */
+/**
+* @desc         Various techniques for hiding elements. Adapted from HTML5 Boilerplate.
+* @name         hide
+* @author       Fiona
+* @tested       IE6-9, Firefox, Chrome, Safari
+* @requires     N/A
+*/
+/* Hide text off screen */
+/* Hide from both screenreaders and browsers: h5bp.com/u */
+/* Hide only visually, but have it available for screenreaders: h5bp.com/v */
+/* Extends the .hideVisually class to allow the element to be focusable when navigated to via the keyboard: h5bp.com/p */
+/* ==========================================================================
+   Hide Visually
+   ========================================================================== */
+/**
+* @desc         Hide element visually but allow screenreaders to read it. Adapted from HTML5 Boilerplate.
+* @name         hide
+* @author       Fiona
+* @tested       IE6-9, Firefox, Chrome, Safari
+* @requires     N/A
+*/
+.hideVisually {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+/* Extends the .hideVisually class to allow the element to be focusable when navigated to via the keyboard: h5bp.com/p */
+.hideVisually.focusable:active,
+.hideVisually.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto;
+}
+
+/* ==========================================================================
+   Hide Fully
+   ========================================================================== */
+/**
+* @desc         Hide from both screenreaders and browsers. Adapted from HTML5 Boilerplate. h5bp.com/u
+* @name         hideFully
+* @author       Fiona
+* @tested       IE6-9, Firefox, Chrome, Safari
+* @requires     N/A
+*/
+.hideFully {
+  display: none !important;
+  visibility: hidden;
+}
+
+/* ==========================================================================
+   Typography
+   ========================================================================== */
+/**
+* @desc         Base typography styles.
+* @name         Typography
+* @author       
+* @tested       
+* @requires     variables.scss
+*/
+/* ==========================================================================
+   Base Type
+   ========================================================================== */
+html {
+  font-size: 100%;
+}
+
+body {
+  font-size: 14px;
+  font-size: 0.875rem;
+  font-family: Arial, sans-serif;
+  line-height: 1.5;
+  color: #313131;
+}
+
+body,
+input,
+select,
+textarea {
+  font-family: Arial, sans-serif;
+}
+
+/* ==========================================================================
+   Headings and paragraph
+   ========================================================================== */
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+  font-style: normal;
+}
+
+h1, .h1 {
+  font-size: 20px;
+  font-size: 1.25rem;
+}
+
+h2, .h2 {
+  font-size: 17px;
+  font-size: 1.0625rem;
+}
+
+h3, .h3 {
+  font-size: 14px;
+  font-size: 0.875rem;
+}
+
+h4, .h4 {
+  font-size: 13px;
+  font-size: 0.8125rem;
+}
+
+h5, .h5 {
+  font-size: 13px;
+  font-size: 0.8125rem;
+}
+
+h6, .h6 {
+  font-size: 11px;
+  font-size: 0.6875rem;
+}
+
+/* ==========================================================================
+   Code
+   ========================================================================== */
+pre,
+code {
+  font-family: Consolas, Monaco, "Lucida Console", monospace;
+}
+
+/* debug */
+/**
+* @desc         Various type colors
+* @name         typecolor
+* @author       
+* @tested       
+* @requires     
+*/
+.typeHighlight {
+  color: #1d4a83;
+}
+
+.typeLowlight {
+  color: #999999;
+}
+
+/**
+* @desc         Uppercase type
+* @name         typeUpper   
+* @author       Fiona   
+* @tested       
+* @requires     --
+*/
+/* ==========================================================================
+   Link
+   ========================================================================== */
+/**
+* @desc         Link
+* @name         link
+* @author       
+* @tested       
+* @requires     variables.scss
+*/
+a {
+  color: #1d4a83;
+}
+a:hover, a:focus {
+  color: #8ebaf4;
+}
+
+/* ==========================================================================
+   Grid
+   ========================================================================== */
+/**
+	* @desc         Grid
+	* @name         Grid Mixin
+	* @author       mobywhale
+	* @tested       Chrome, Firefox, IE7-9  
+	* @requires     variables.scss
+	*/
+/* ie 7 and earlier need percentage based gutters because they dont do border-box */
+.cols1of12 {
+  width: 8.33333% !important;
+}
+
+.cols2of12 {
+  width: 16.66667% !important;
+}
+
+.cols3of12 {
+  width: 25% !important;
+}
+
+.cols4of12 {
+  width: 33.33333% !important;
+}
+
+.cols5of12 {
+  width: 41.66667% !important;
+}
+
+.cols6of12 {
+  width: 50% !important;
+}
+
+.cols7of12 {
+  width: 58.33333% !important;
+}
+
+.cols8of12 {
+  width: 66.66667% !important;
+}
+
+.cols9of12 {
+  width: 75% !important;
+}
+
+.cols10of12 {
+  width: 83.33333% !important;
+}
+
+.cols11of12 {
+  width: 91.66667% !important;
+}
+
+.cols12of12 {
+  width: 100% !important;
+}
+
+.line {
+  margin-left: -20px;
+}
+.line .col {
+  min-height: 1px;
+  float: left;
+  zoom: 1;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding-left: 20px;
+}
+
+.colExt {
+  float: right;
+  zoom: 1;
+  padding: 0 0 0 20px;
+}
+
+.col:last-child {
+  float: none;
+  display: table-cell;
+  vertical-align: top;
+  width: 10000px !important;
+}
+
+.hide {
+  display: none !important;
+}
+
+.show {
+  display: inherit !important;
+}
+
+  /*  For each breakpoint that we set, we create a set of classes specific to the breakpoint.
+      E.g. if we only have 1 breakpoint(20em) and not mobile first, it'll generate:
+      @media only screen and (max-width: 20em) {
+        .medHide {
+          display: none !important;
+        }
+
+        ....
+
+        .medCol1of12 {
+          ...
+        }
+      }
+  }
+  */
+@media only screen and (max-width: 56.25em) {
+  .lgHide {
+    display: none !important;
+  }
+
+  .lgShow {
+    display: inherit !important;
+  }
+
+  .lgCollapse > .col,
+  .lgCollapse {
+    width: auto !important;
+    display: block !important;
+    float: none !important;
+  }
+
+  .lgExpand > .col {
+    width: auto !important;
+  }
+
+  .lgDeepExpand .col {
+    width: auto !important;
+  }
+
+  .line {
+    margin-left: -20px;
+  }
+  .line .col {
+    padding-left: 20px;
+  }
+
+  .lgCols1of12 {
+    width: 8.33333% !important;
+  }
+
+  .lgCols2of12 {
+    width: 16.66667% !important;
+  }
+
+  .lgCols3of12 {
+    width: 25% !important;
+  }
+
+  .lgCols4of12 {
+    width: 33.33333% !important;
+  }
+
+  .lgCols5of12 {
+    width: 41.66667% !important;
+  }
+
+  .lgCols6of12 {
+    width: 50% !important;
+  }
+
+  .lgCols7of12 {
+    width: 58.33333% !important;
+  }
+
+  .lgCols8of12 {
+    width: 66.66667% !important;
+  }
+
+  .lgCols9of12 {
+    width: 75% !important;
+  }
+
+  .lgCols10of12 {
+    width: 83.33333% !important;
+  }
+
+  .lgCols11of12 {
+    width: 91.66667% !important;
+  }
+
+  .lgCols12of12 {
+    width: 100% !important;
+  }
+}
+  /*  For each breakpoint that we set, we create a set of classes specific to the breakpoint.
+      E.g. if we only have 1 breakpoint(20em) and not mobile first, it'll generate:
+      @media only screen and (max-width: 20em) {
+        .medHide {
+          display: none !important;
+        }
+
+        ....
+
+        .medCol1of12 {
+          ...
+        }
+      }
+  }
+  */
+@media only screen and (max-width: 41em) {
+  .medHide {
+    display: none !important;
+  }
+
+  .medShow {
+    display: inherit !important;
+  }
+
+  .medCollapse > .col,
+  .medCollapse {
+    width: auto !important;
+    display: block !important;
+    float: none !important;
+  }
+
+  .medExpand > .col {
+    width: auto !important;
+  }
+
+  .medDeepExpand .col {
+    width: auto !important;
+  }
+
+  .line {
+    margin-left: -20px;
+  }
+  .line .col {
+    padding-left: 20px;
+  }
+
+  .medCols1of12 {
+    width: 8.33333% !important;
+  }
+
+  .medCols2of12 {
+    width: 16.66667% !important;
+  }
+
+  .medCols3of12 {
+    width: 25% !important;
+  }
+
+  .medCols4of12 {
+    width: 33.33333% !important;
+  }
+
+  .medCols5of12 {
+    width: 41.66667% !important;
+  }
+
+  .medCols6of12 {
+    width: 50% !important;
+  }
+
+  .medCols7of12 {
+    width: 58.33333% !important;
+  }
+
+  .medCols8of12 {
+    width: 66.66667% !important;
+  }
+
+  .medCols9of12 {
+    width: 75% !important;
+  }
+
+  .medCols10of12 {
+    width: 83.33333% !important;
+  }
+
+  .medCols11of12 {
+    width: 91.66667% !important;
+  }
+
+  .medCols12of12 {
+    width: 100% !important;
+  }
+}
+  /*  For each breakpoint that we set, we create a set of classes specific to the breakpoint.
+      E.g. if we only have 1 breakpoint(20em) and not mobile first, it'll generate:
+      @media only screen and (max-width: 20em) {
+        .medHide {
+          display: none !important;
+        }
+
+        ....
+
+        .medCol1of12 {
+          ...
+        }
+      }
+  }
+  */
+@media only screen and (max-width: 25em) {
+  .smHide {
+    display: none !important;
+  }
+
+  .smShow {
+    display: inherit !important;
+  }
+
+  .smCollapse > .col,
+  .smCollapse {
+    width: auto !important;
+    display: block !important;
+    float: none !important;
+  }
+
+  .smExpand > .col {
+    width: auto !important;
+  }
+
+  .smDeepExpand .col {
+    width: auto !important;
+  }
+
+  .line {
+    margin-left: -20px;
+  }
+  .line .col {
+    padding-left: 20px;
+  }
+
+  .smCols1of12 {
+    width: 8.33333% !important;
+  }
+
+  .smCols2of12 {
+    width: 16.66667% !important;
+  }
+
+  .smCols3of12 {
+    width: 25% !important;
+  }
+
+  .smCols4of12 {
+    width: 33.33333% !important;
+  }
+
+  .smCols5of12 {
+    width: 41.66667% !important;
+  }
+
+  .smCols6of12 {
+    width: 50% !important;
+  }
+
+  .smCols7of12 {
+    width: 58.33333% !important;
+  }
+
+  .smCols8of12 {
+    width: 66.66667% !important;
+  }
+
+  .smCols9of12 {
+    width: 75% !important;
+  }
+
+  .smCols10of12 {
+    width: 83.33333% !important;
+  }
+
+  .smCols11of12 {
+    width: 91.66667% !important;
+  }
+
+  .smCols12of12 {
+    width: 100% !important;
+  }
+}
+/* ==========================================================================
+   Box
+   ========================================================================== */
+/**
+	* @desc         Base box mixin for grouping content
+	* @name         Box Mixin
+	* @author       mobywhale
+	* @tested       Chrome, Firefox, IE7-9  
+	* @requires     variables.scss
+	*/
+.box {
+  position: relative;
+}
+.box .boxHead,
+.box .boxFoot {
+  padding: 0 20px;
+}
+.box .boxBody {
+  padding: 0 20px;
+}
+
+/**
+* @desc         Skin class.
+* @name         Box Basic
+* @author       mobywhale
+* @tested       Chrome, Firefox, IE7-9  
+* @requires     variables.scss
+*/
+.boxBasic {
+  border-radius: 6px;
+}
+
+/* ==========================================================================
+   Divider
+   ========================================================================== */
+/**
+* @desc         Basic divider
+* @name         Divider
+* @author       
+* @tested       
+* @requires     variables.scss
+*/
+hr {
+  border: none;
+  border-bottom: 1px solid #1d4a83;
+}
+
+/* ==========================================================================
+   List
+   ========================================================================== */
+/**
+* @name         List
+* @desc         Basic list with no bullets and no margins
+* @author       
+* @tested       
+* @requires     
+*/
+ol,
+ul {
+  list-style-type: none;
+}
+ol > li,
+ul > li {
+  margin: .2em 0;
+}
+
+/**
+* @name         List
+* @desc         Basic list with no bullets and no margins
+* @author       
+* @tested       
+* @requires     
+*/
+/*
+ * Define your own spacing classes for lists
+ * 
+ * @param $units - specific spacing units you want to use. Must go from small to large
+ * e.g. @include ooListWhitespace((5px,10px,20px));
+ *
+ */
+/* build list spacing exceptions */
+.lvn > li {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+.lvs > li {
+  padding-top: 5px !important;
+  padding-bottom: 5px !important;
+}
+
+.lvm > li {
+  padding-top: 10px !important;
+  padding-bottom: 10px !important;
+}
+
+.lvl > li {
+  padding-top: 20px !important;
+  padding-bottom: 20px !important;
+}
+
+.lhn > li {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+.lhs > li {
+  padding-left: 5px !important;
+  padding-right: 5px !important;
+}
+
+.lhm > li {
+  padding-left: 10px !important;
+  padding-right: 10px !important;
+}
+
+.lhl > li {
+  padding-left: 20px !important;
+  padding-right: 20px !important;
+}
+
+/**
+* @name         List bordered
+* @desc         Bordered list with top border
+* @author       
+* @tested       
+* @requires     
+*/
+.listBordered > li {
+  padding: 10px;
+  border-top: 1px solid #999999;
+}
+.listBordered > li:first-child {
+  border-top: 1px solid transparent;
+}
+
+/**
+* @name         List bulleted
+* @desc         Bulleted list of unordered list
+* @author       
+* @tested       
+* @requires     
+*/
+.listBulleted > li {
+  list-style-type: disc;
+  margin-left: 1.3em;
+}
+
+/**
+* @name         List inline
+* @desc         List displayed horizontally
+* @author       
+* @tested       
+* @requires     
+*/
+.listInline > li {
+  vertical-align: middle;
+  padding-right: 10px;
+}
+
+/**
+* @name         List inline divider
+* @desc         List displayed horizontally with divider
+* @author       
+* @tested       
+* @requires     
+*/
+.listInlineDivider li {
+  border-left: solid 2px #999999;
+  padding: 0 .4em 0 0.65em;
+  margin: 0;
+}
+.listInlineDivider:first-child {
+  border: none;
+  padding-left: 0;
+}
+
+/**
+* @name         Ordered list
+* @desc         Basic list with no bullets and no margins
+* @author       
+* @tested       
+* @requires     
+*/
+.listOrdered li {
+  margin-left: 1.4em;
+  list-style-type: decimal;
+}
+
+/* ==========================================================================
+   Media block
+   ========================================================================== */
+/**
+* @name         Media block
+* @desc         Media block - image on left/right, text next to it.
+* @author       
+* @tested       
+* @requires     
+*/
+.media > .mediaImg {
+  float: left;
+  margin-right: 10px;
+}
+.media > .mediaImg > img {
+  display: block;
+}
+.media > .mediaImgExt {
+  float: right;
+  margin-left: 10px;
+  margin-right: 0;
+}
+
+/* ==========================================================================
+   Inline media block
+   ========================================================================== */
+/**
+* @name         Inline media block
+* @desc         Similar to media block, but allows verical alignment.
+* @author       
+* @tested       
+* @requires     
+*/
+.mediaInline {
+  vertical-align: middle;
+}
+.mediaInline > img, .mediaInline > span {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* ==========================================================================
+   Table
+   ========================================================================== */
+/**
+  * @desc         Base table mixin that provides helper classes for aligning table content
+  * @name         Table Mixin
+  * @author       mobywhale
+  * @tested       chrome, firefox
+  * @requires     ---
+  */
+.table {
+  width: 100%;
+  /* horizontal alignment */
+  /* vertical alignment */
+}
+.table thead th {
+  font-size: 14px;
+  font-size: 0.875rem;
+  font-weight: bold;
+  color: #313131;
+}
+.table th,
+.table td {
+  padding: 8px;
+}
+
+/* ==========================================================================
+   Table Spacing helpers
+   ========================================================================== */
+/**
+ * Table Spacing helpers 
+ * Should be used to modify the default spacing of table cells. 
+ * <type><location><size>
+ *
+ * t            table
+ * a,h,v        all,horizontal,vertical
+ * s,m,l,n      small(5px),medium(10px),large(20px),none(0px)
+ */
+/*
+ * Define your own spacing classes for table
+ * 
+ * @param $units - specific spacing units you want to use. Must go from small to large
+ * e.g. @include ooTableWhitespace((5px,10px,20px));
+ *
+ */
+/* build spacing exceptions */
+.tan td,
+.tan th {
+  padding: 0;
+}
+
+.tas td,
+.tas th {
+  padding: 5px;
+}
+
+.tam td,
+.tam th {
+  padding: 10px;
+}
+
+.tal td,
+.tal th {
+  padding: 20px;
+}
+
+.tvn td,
+.tvn th {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.tvs td,
+.tvs th {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.tvm td,
+.tvm th {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.tvl td,
+.tvl th {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.thn td,
+.thn th {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.ths td,
+.ths th {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.thm td,
+.thm th {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.thl td,
+.thl th {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+/* ==========================================================================
+   Form
+   ========================================================================== */
+.form .text input, .form .select select, .form .text textarea {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 4px;
+  border: 1px solid #666666;
+}
+
+.form .fieldItem, .form .fieldGroup, .form .fieldGroupInline {
+  display: table-cell;
+  width: 10000px;
+  *width: auto;
+  *display: block;
+  *zoom: 1;
+}
+
+::-webkit-input-placeholder {
+  color: #999999;
+}
+
+:-moz-placeholder {
+  color: #999999;
+}
+
+:-ms-input-placeholder {
+  color: #999999;
+}
+
+.placeholder {
+  color: #999999;
+}
+
+.form {
+  /**
+    Forms Structure
+  */
+}
+.form .col :first-child {
+  margin-top: 0;
+}
+.form .col :last-child {
+  margin-bottom: 0;
+}
+
+/**
+* @desc         Label
+* @name         label
+* @author       
+* @tested       
+* @requires     _variables.scss
+*/
+.form .fieldLabel {
+  margin-bottom: 2px;
+  min-height: 1px;
+  display: block;
+  cursor: pointer;
+  font-weight: bold;
+}
+.form label.labelLeft,
+.form .labelLeft .fieldLabel {
+  width: 30%;
+  float: left;
+  padding: 4px 13px 4px 0;
+  text-align: right;
+}
+
+/**
+* @desc         Input text
+* @name         Input
+* @author       
+* @tested       
+* @requires     form.scss
+*/
+.form .text input {
+  width: 100%;
+}
+
+/**
+* @desc         Default Select dropdown
+* @name         Select
+* @author       
+* @tested       
+* @requires     form.scss
+*/
+.form .select select {
+  width: 100%;
+}
+
+/**
+* @desc         Checkbox & radio buttons
+* @name         checkboxRadio
+* @author       
+* @tested       
+* @requires    
+*/
+.form {
+  /** webkit fix */
+}
+.form .radio,
+.form .checkbox {
+  position: relative;
+}
+.form .radio label,
+.form .checkbox label {
+  display: block;
+  width: auto;
+  padding-left: 1.4em;
+  *zoom: 1;
+  *padding-left: 0;
+  vertical-align: middle;
+}
+.form .radio input,
+.form .checkbox input {
+  margin-right: 5px;
+  padding: 0;
+  float: left;
+  position: relative;
+  top: 4px;
+  border: 0;
+  line-height: 1.5em;
+  vertical-align: middle;
+}
+.form .radio input[type="radio"],
+.form .checkbox input[type="radio"] {
+  top: 4px;
+}
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  .form .radio input, .form .checkbox input {
+    top: 0.35em;
+  }
+  .form .radio input[type="radio"], .form .checkbox input[type="radio"] {
+    left: 1px;
+  }
+}
+
+/**
+* @desc         Textarea
+* @name         textarea
+* @author       
+* @tested       
+* @requires    
+*/
+.form .text textarea {
+  width: 100%;
+  padding: 8px;
+}
+
+/**
+* @desc         Textarea
+* @name         textarea
+* @author       
+* @tested       
+* @requires    
+*/
+.form .fieldGroup {
+  margin: 0;
+}
+.form .fieldGroup > li {
+  margin: 5px 0;
+}
+.form .fieldGroup > li > label {
+  display: block;
+  margin-bottom: 2px;
+}
+.form .fieldGroup:before, .form .fieldGroup:after {
+  display: table;
+  content: "";
+  clear: both;
+}
+
+/**
+* @desc         Inline field group
+* @name         fieldGroupInline
+* @author       
+* @tested       
+* @requires    
+*/
+.form .fieldGroupInline > li {
+  margin-left: 13px;
+  float: none;
+}
+.form .fieldGroupInline > li:first-child {
+  margin-left: 0;
+}
+.form .fieldGroupInline > li > label {
+  display: inline-block;
+  margin: 0;
+}
+.form .fieldGroupInline label,
+.form .fieldGroupInline .fieldItem {
+  vertical-align: middle;
+  float: none;
+  display: inline-block;
+  width: auto;
+}
+.form .fieldGroupInline .radio input,
+.form .fieldGroupInline .checkbox input {
+  top: auto;
+  float: none;
+  vertical-align: middle;
+}
+.form .fieldGroupInline .radio label,
+.form .fieldGroupInline .checkbox label {
+  padding-left: 0;
+}
+
+/**
+* @desc         Inline field group
+* @name         fieldGroupInline
+* @author       
+* @tested       
+* @requires    
+*/
+.form .fieldRange > li {
+  display: table-cell;
+  vertical-align: middle;
+}
+.form .fieldRange .rangeLabel {
+  padding: 0 10px;
+}
+
+/* ==========================================================================
+   Button
+   ========================================================================== */
+/**
+* @desc         Base button styles.
+* @name         Button
+* @author       
+* @tested       
+* @requires     
+*/
+button {
+  background: none;
+  border: 0;
+}
+
+/* Base button */
+.btn {
+  padding: .5em 1em;
+  margin: 0;
+  display: inline-block;
+  font-weight: normal;
+  font-size: 13px;
+  font-size: 0.8125rem;
+  text-decoration: none;
+  cursor: pointer;
+  border: 0;
+  background: none;
+  text-align: center;
+}
+
+/**
+* @desc         Button skins
+* @extends      .btn
+*/
+.btnDefault {
+  border: 1px solid #999999;
+  background: #dddddd;
+  border-radius: 3px;
+}
+
+/* ==========================================================================
+   Template
+   ========================================================================== */
+/**
+* @desc         Template
+*/
+body {
+  background: white;
+}
+
+.container {
+  width: 90%;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.logo {
+  font-size: 40px;
+  font-size: 2.5rem;
+}
+
+.footer .container {
+  padding: .5em 0 0;
+  border-top: 1px solid #999999;
+}
+
+/* ==========================================================================
+   Icon
+   ========================================================================== */
+/* ==========================================================================
+   Whitespace
+   ========================================================================== */
+/**
+* @desc         Create spacing classes and default spacing.
+* @name         Whitespace
+* @author       Fiona
+* @tested       Safari, Chrome, Firefox, IE7-9
+* @requires     _variables.scss
+*/
+/* ==========================================================================
+   Default spacing
+   ========================================================================== */
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6, p, .box, .listBordered, .listBulleted, .listInline, .listInlineDivider, .listOrdered, .media, .table, .form, .form .field {
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+}
+
+table h1, table h2, table h3, table h4, table h5, table h6, table p, table ul, table ol, table dl, table blockquote, table .media, table pre {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+/* *
+ * debug default spacing 
+ * set $debug-spacing to true to visualize spacing and positioning
+ */
+/* ==========================================================================
+   Spacing helpers
+   ========================================================================== */
+/**
+ * Spacing helpers 
+ * Should be used to modify the default spacing between objects (not between nodes of the same object)
+ * Please use judiciously. You want to be using defaults most of the time, these are exceptions! 
+ * <type><location><size>
+ *
+ * p,m 				padding,margin
+ * a,t,r,b,l,h,v	all,top,right,bottom,left,horizontal,vertical
+ * s,m,l,n 			small(5px),medium(10px),large(20px),none(0px)
+ */
+/*
+ * Can define your own spacing units, or calculate the units based on how many spacing sizes you want
+ * 
+ * @param $units - specific spacing units you want to use. Must go from small to large
+ * e.g. @include whitespace((5px,10px,20px));
+ *
+ * @param $sizes - how many sizes you want. Calculate sizes based on line-height
+ * e.g. @include whitespace((), 4);
+ *
+ */
+.pan {
+  padding: 0 !important;
+}
+
+.man {
+  margin: 0 !important;
+}
+
+.pvn {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+.mvn {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+.phn {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+.mhn {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+.ptn {
+  padding-top: 0 !important;
+}
+
+.mtn {
+  margin-top: 0 !important;
+}
+
+.prn {
+  padding-right: 0 !important;
+}
+
+.mrn {
+  margin-right: 0 !important;
+}
+
+.pbn {
+  padding-bottom: 0 !important;
+}
+
+.mbn {
+  margin-bottom: 0 !important;
+}
+
+.pln {
+  padding-left: 0 !important;
+}
+
+.mln {
+  margin-left: 0 !important;
+}
+
+.pas {
+  padding: 5px !important;
+}
+
+.mas {
+  margin: 5px !important;
+}
+
+.pvs {
+  padding-top: 5px !important;
+  padding-bottom: 5px !important;
+}
+
+.mvs {
+  margin-top: 5px !important;
+  margin-bottom: 5px !important;
+}
+
+.phs {
+  padding-left: 5px !important;
+  padding-right: 5px !important;
+}
+
+.mhs {
+  margin-left: 5px !important;
+  margin-right: 5px !important;
+}
+
+.pts {
+  padding-top: 5px !important;
+}
+
+.mts {
+  margin-top: 5px !important;
+}
+
+.prs {
+  padding-right: 5px !important;
+}
+
+.mrs {
+  margin-right: 5px !important;
+}
+
+.pbs {
+  padding-bottom: 5px !important;
+}
+
+.mbs {
+  margin-bottom: 5px !important;
+}
+
+.pls {
+  padding-left: 5px !important;
+}
+
+.mls {
+  margin-left: 5px !important;
+}
+
+.pam {
+  padding: 7px !important;
+}
+
+.mam {
+  margin: 7px !important;
+}
+
+.pvm {
+  padding-top: 7px !important;
+  padding-bottom: 7px !important;
+}
+
+.mvm {
+  margin-top: 7px !important;
+  margin-bottom: 7px !important;
+}
+
+.phm {
+  padding-left: 7px !important;
+  padding-right: 7px !important;
+}
+
+.mhm {
+  margin-left: 7px !important;
+  margin-right: 7px !important;
+}
+
+.ptm {
+  padding-top: 7px !important;
+}
+
+.mtm {
+  margin-top: 7px !important;
+}
+
+.prm {
+  padding-right: 7px !important;
+}
+
+.mrm {
+  margin-right: 7px !important;
+}
+
+.pbm {
+  padding-bottom: 7px !important;
+}
+
+.mbm {
+  margin-bottom: 7px !important;
+}
+
+.plm {
+  padding-left: 7px !important;
+}
+
+.mlm {
+  margin-left: 7px !important;
+}
+
+.pal {
+  padding: 11px !important;
+}
+
+.mal {
+  margin: 11px !important;
+}
+
+.pvl {
+  padding-top: 11px !important;
+  padding-bottom: 11px !important;
+}
+
+.mvl {
+  margin-top: 11px !important;
+  margin-bottom: 11px !important;
+}
+
+.phl {
+  padding-left: 11px !important;
+  padding-right: 11px !important;
+}
+
+.mhl {
+  margin-left: 11px !important;
+  margin-right: 11px !important;
+}
+
+.ptl {
+  padding-top: 11px !important;
+}
+
+.mtl {
+  margin-top: 11px !important;
+}
+
+.prl {
+  padding-right: 11px !important;
+}
+
+.mrl {
+  margin-right: 11px !important;
+}
+
+.pbl {
+  padding-bottom: 11px !important;
+}
+
+.mbl {
+  margin-bottom: 11px !important;
+}
+
+.pll {
+  padding-left: 11px !important;
+}
+
+.mll {
+  margin-left: 11px !important;
+}
+
+.paxl {
+  padding: 21px !important;
+}
+
+.maxl {
+  margin: 21px !important;
+}
+
+.pvxl {
+  padding-top: 21px !important;
+  padding-bottom: 21px !important;
+}
+
+.mvxl {
+  margin-top: 21px !important;
+  margin-bottom: 21px !important;
+}
+
+.phxl {
+  padding-left: 21px !important;
+  padding-right: 21px !important;
+}
+
+.mhxl {
+  margin-left: 21px !important;
+  margin-right: 21px !important;
+}
+
+.ptxl {
+  padding-top: 21px !important;
+}
+
+.mtxl {
+  margin-top: 21px !important;
+}
+
+.prxl {
+  padding-right: 21px !important;
+}
+
+.mrxl {
+  margin-right: 21px !important;
+}
+
+.pbxl {
+  padding-bottom: 21px !important;
+}
+
+.mbxl {
+  margin-bottom: 21px !important;
+}
+
+.plxl {
+  padding-left: 21px !important;
+}
+
+.mlxl {
+  margin-left: 21px !important;
+}
