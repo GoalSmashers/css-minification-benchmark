@@ -56,11 +56,13 @@ var styled = function(value, color, bootstrapClass) {
 var minifierNames = activeMinifiers.slice(0).map(function(name) {
   var packageName = name.split(' ')[0];
   var packageDefinition = JSON.parse(fs.readFileSync(path.join('node_modules', packageName, 'package.json')));
-  var homepage = packageDefinition.homepage;
+  var repositoryUrl = packageDefinition.repository &&
+    packageDefinition.repository.url &&
+    packageDefinition.repository.url.replace(/^git:\/\//, 'https://');
   var version = packageDefinition.version;
 
-  if (asHTML && homepage)
-    return '<a href="' + homepage + '">' + name + ' - ' + version + '</a>';
+  if (asHTML && repositoryUrl)
+    return '<a href="' + repositoryUrl + '">' + name + ' - ' + version + '</a>';
   else
     return name + ' - ' + version;
 });
