@@ -77,7 +77,10 @@ var benchmark = function(filename) {
     return;
 
   var source = fs.readFileSync(path.join('data', filename), 'utf8');
-  var row = [filename + ' (<em>' + source.length + ' bytes</em>)'];
+  var size = asHTML ?
+    ' - <em>' + source.length + ' bytes</em>' :
+    ' - ' + source.length + ' bytes';
+  var row = [filename + size];
   var sizes = [];
   var times = [];
 
