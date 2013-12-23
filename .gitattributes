@@ -1,0 +1,2 @@
+# Enforce Unix newlines
+data/*.css  text eol=lf
