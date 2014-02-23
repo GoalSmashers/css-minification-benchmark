@@ -1,0 +1,10 @@
+pygments: false
+
+exclude:
+- "bin"
+- "data"
+- "lib"
+- "node_modules"
+- "LICENSE"
+- "README.md"
+- "package.json"
