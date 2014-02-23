@@ -48,9 +48,8 @@ for (var name in minifiers) {
 
 // FORMATTING
 var styled = function(value, color, bootstrapClass) {
-
   return asHTML ?
-    '<span class="' + bootstrapClass + '">' + value + '</span>' :
+    { 'class': bootstrapClass, value: value } :
     value[color];
 };
 
@@ -110,23 +109,20 @@ var benchmark = function(filename) {
 
   row = row.map(function(result) {
     if (result.time == -1)
-      return styled('error', 'red', 'text-danger');
+      return styled('error', 'red', 'danger');
     if (typeof result == 'string')
       return result;
 
-    var size = '' + result.size;
+    // var value = result.size + ' bytes (' + result.time + ' ms)';
+    var value = result.size + ' bytes';
+    var formatted = value;
+
     if (result.size == sizes[sizes.length - 1] && sizes.length > 1 && sizes[0] != sizes[sizes.length - 1])
-      size = styled(size, 'red', 'text-warning');
+      formatted = styled(value, 'red', 'warning');
     if (result.size == sizes[0])
-      size = styled(size, 'green', 'text-success');
+      formatted = styled(value, 'green', 'success');
 
-    var time = '' + result.time;
-    if (result.time == times[times.length - 1] && times.length > 1 && times[0] != times[times.length - 1])
-      time = styled(time, 'red', 'text-warning');
-    if (result.time == times[0])
-      time = styled(time, 'green', 'text-success');
-
-    return size + ' bytes (' + time + ' ms)';
+    return formatted;
   });
 
   results.push(row);
