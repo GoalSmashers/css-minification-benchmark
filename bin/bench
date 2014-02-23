@@ -118,7 +118,7 @@ var benchmark = function(filename) {
     var formatted = value;
 
     if (result.size == sizes[sizes.length - 1] && sizes.length > 1 && sizes[0] != sizes[sizes.length - 1])
-      formatted = styled(value, 'red', 'warning');
+      formatted = styled(value, 'red', 'danger');
     if (result.size == sizes[0])
       formatted = styled(value, 'green', 'success');
 
