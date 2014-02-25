@@ -11,6 +11,7 @@ A comparison of CSS minification engines.
 * [clean-css](https://github.com/GoalSmashers/clean-css)
 * [csso](https://github.com/css/csso)
 * [ncss](https://github.com/kurakin/ncss)
+* [sqwish](https://github.com/ded/sqwish)
 * [ycssmin](https://github.com/yui/ycssmin)
 
 ### What are the results?
