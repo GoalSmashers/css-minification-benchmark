@@ -31,25 +31,6 @@
     "ycssmin": "1.0.x",
     "sqwish": "0.2.x"
   },
-  "jshintConfig": {
-    "browser": false,
-    "camelcase": true,
-    "curly": false,
-    "eqeqeq": false,
-    "eqnull": true,
-    "immed": true,
-    "indent": 2,
-    "latedef": true,
-    "multistr": false,
-    "noarg": true,
-    "node": true,
-    "plusplus": false,
-    "quotmark": "single",
-    "strict": false,
-    "trailing": true,
-    "undef": true,
-    "unused": true
-  },
   "engines": {
     "node": ">=0.8.0"
   }
