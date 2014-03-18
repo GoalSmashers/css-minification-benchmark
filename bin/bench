@@ -9,6 +9,7 @@ var csso = require('csso');
 var ncss = require('ncss');
 var ycssmin = require('ycssmin');
 var sqwish = require('sqwish');
+var cssCondense = require('css-condense');
 
 var Table = require('cli-table');
 var HTMLTable = require('../lib/html-table');
@@ -38,7 +39,8 @@ var minifiers = {
   },
   'ncss': ncss,
   'ycssmin': ycssmin.cssmin,
-  'sqwish': sqwish.minify
+  'sqwish': sqwish.minify,
+  'css-condense': cssCondense.compress
 };
 var activeMinifiers = [];
 for (var name in minifiers) {
