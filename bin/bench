@@ -5,6 +5,7 @@ var output = process.stdout.write.bind(process.stdout);
 process.stdout.write = function() {};
 
 var CleanCSS = require('clean-css');
+var cssCondense = require('css-condense');
 var csso = require('csso');
 var ncss = require('ncss');
 var ycssmin = require('ycssmin');
@@ -32,6 +33,7 @@ var minifiers = {
   'clean-css (advanced off)': function(source) {
     return new CleanCSS({ noAdvanced: true }).minify(source);
   },
+  'css-condense': cssCondense.compress,
   'csso': csso.justDoIt,
   'csso (reordering off)': function(source) {
     return csso.justDoIt(source, true);
