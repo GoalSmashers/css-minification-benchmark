@@ -8,8 +8,8 @@ var CleanCSS = require('clean-css');
 var cssCondense = require('css-condense');
 var csso = require('csso');
 var ncss = require('ncss');
-var ycssmin = require('ycssmin');
 var sqwish = require('sqwish');
+var ycssmin = require('ycssmin');
 
 var Table = require('cli-table');
 var HTMLTable = require('../lib/html-table');
@@ -39,8 +39,8 @@ var minifiers = {
     return csso.justDoIt(source, true);
   },
   'ncss': ncss,
-  'ycssmin': ycssmin.cssmin,
-  'sqwish': sqwish.minify
+  'sqwish': sqwish.minify,
+  'ycssmin': ycssmin.cssmin
 };
 var activeMinifiers = [];
 for (var name in minifiers) {
