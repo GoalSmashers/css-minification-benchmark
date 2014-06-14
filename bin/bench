@@ -28,10 +28,10 @@ var asHTML = process.argv.indexOf('--html') > -1;
 // MINIFIERS
 var minifiers = {
   'clean-css': function(source) {
-    return new CleanCSS().minify(source);
+    return new CleanCSS({ processImport: false }).minify(source);
   },
   'clean-css (advanced off)': function(source) {
-    return new CleanCSS({ noAdvanced: true }).minify(source);
+    return new CleanCSS({ noAdvanced: true, processImport: false }).minify(source);
   },
   'css-condense': cssCondense.compress,
   'csso': csso.justDoIt,
