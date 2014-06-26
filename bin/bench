@@ -7,6 +7,7 @@ process.stdout.write = function() {};
 var CleanCSS = require('clean-css');
 var cssCondense = require('css-condense');
 var csso = require('csso');
+var cssshrink = require('cssshrink');
 var ncss = require('ncss');
 var sqwish = require('sqwish');
 var ycssmin = require('ycssmin');
@@ -38,6 +39,7 @@ var minifiers = {
   'csso (reordering off)': function(source) {
     return csso.justDoIt(source, true);
   },
+  'cssshrink': cssshrink.shrink,
   'ncss': ncss,
   'sqwish': sqwish.minify,
   'ycssmin': ycssmin.cssmin
