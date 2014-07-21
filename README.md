@@ -1,4 +1,4 @@
-[![devDependency Status](https://david-dm.org/GoalSmashers/css-minification-benchmark/dev-status.png?theme=shields.io)](https://david-dm.org/GoalSmashers/css-minification-benchmark#info=devDependencies)
+[![devDependency Status](https://david-dm.org/GoalSmashers/css-minification-benchmark/dev-status.svg)](https://david-dm.org/GoalSmashers/css-minification-benchmark#info=devDependencies)
 
 ## What is css-minification-benchmark?
 
