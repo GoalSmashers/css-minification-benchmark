@@ -12,6 +12,7 @@ A comparison of CSS minification engines.
 * [css-condense](https://github.com/rstacruz/css-condense)
 * [csso](https://github.com/css/csso)
 * [cssshrink](https://github.com/stoyan/cssshrink)
+* [csswring](https://github.com/hail2u/node-csswring)
 * [ncss](https://github.com/kurakin/ncss)
 * [sqwish](https://github.com/ded/sqwish)
 * [ycssmin](https://github.com/yui/ycssmin)
