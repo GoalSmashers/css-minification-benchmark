@@ -35,7 +35,9 @@ var minifiers = {
   'clean-css (advanced off)': function(source) {
     return new CleanCSS({ noAdvanced: true, processImport: false }).minify(source);
   },
-  'css-condense': cssCondense.compress,
+  'css-condense': function(source) {
+    return cssCondense.compress(source, { safe: true });
+  },
   'csso': csso.justDoIt,
   'csso (reordering off)': function(source) {
     return csso.justDoIt(source, true);
