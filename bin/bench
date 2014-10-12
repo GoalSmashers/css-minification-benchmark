@@ -19,7 +19,7 @@ var fs = require('fs');
 var path = require('path');
 require('colors');
 
-var lineBreak = process.platform == 'win32' ? '\r\n' : '\n';
+var lineBreak = require('os').EOL;
 
 // ARGUMENTS
 var only = process.argv.indexOf('--only') > -1 ?
