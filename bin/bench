@@ -9,6 +9,7 @@ var cssCondense = require('css-condense');
 var csso = require('csso');
 var cssshrink = require('cssshrink');
 var csswring = require('csswring');
+var moreCss = require('more-css');
 var ncss = require('ncss');
 var sqwish = require('sqwish');
 var ycssmin = require('ycssmin');
@@ -45,6 +46,9 @@ var minifiers = {
   'cssshrink': cssshrink.shrink,
   'csswring': function (source) {
      return csswring.wring(source).css;
+  },
+  'more-css': function(source) {
+    return moreCss.compress(source, true);
   },
   'ncss': ncss,
   'sqwish': sqwish.minify,
