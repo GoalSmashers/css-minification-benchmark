@@ -1,4 +1,4 @@
-pygments: false
+highlighter: false
 
 exclude:
 - "bin"
