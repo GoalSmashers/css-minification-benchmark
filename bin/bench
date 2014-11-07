@@ -102,7 +102,7 @@ var benchmark = function(filename) {
       var start = process.hrtime();
       var minified = minifiers[name](source);
       var itTook = process.hrtime(start);
-      var took = ~~(1000 * itTook[0] + itTook[1] / 1000000);
+      var took = Math.round((1000 * itTook[0] + itTook[1] / 1000000)*100)/100;
 
       sizes.push(minified.length);
       times.push(took);
@@ -125,12 +125,33 @@ var benchmark = function(filename) {
 
     // var value = result.size + ' bytes (' + result.time + ' ms)';
     var value = result.size + ' bytes';
-    var formatted = value;
+    var valueStyled = value;
+    var formatted = asHTML ? {} : '';
 
     if (result.size == sizes[sizes.length - 1] && sizes.length > 1 && sizes[0] != sizes[sizes.length - 1])
-      formatted = styled(value, 'red', 'danger');
+      valueStyled = styled(value, 'red', 'danger');
     if (result.size == sizes[0])
-      formatted = styled(value, 'green', 'success');
+      valueStyled = styled(value, 'green', 'success');
+
+    if (asHTML) {
+      formatted.size = valueStyled.value || value;
+      formatted.sizeClass = valueStyled.class || 'default';
+    }
+    else 
+      formatted = valueStyled;
+    
+    valueStyled = value = result.time+' ms';
+    
+    if (result.time == times[times.length - 1] && times.length > 1 && times[0] != times[times.length - 1])
+      valueStyled = styled(value, 'red', 'danger');
+    if (result.time == times[0])
+      valueStyled = styled(value, 'green', 'success');
+    if (asHTML) {
+      formatted.time = valueStyled.value || value;
+      formatted.timeClass = valueStyled.class || 'default';
+    }
+    else 
+      formatted += ' - '+valueStyled;
 
     return formatted;
   });
