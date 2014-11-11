@@ -45,7 +45,7 @@ var minifiers = {
   },
   'cssshrink': cssshrink.shrink,
   'csswring': function (source) {
-     return csswring.wring(source).css;
+    return csswring.wring(source).css;
   },
   'more-css': function(source) {
     return moreCss.compress(source, true);
@@ -54,6 +54,7 @@ var minifiers = {
   'sqwish': sqwish.minify,
   'ycssmin': ycssmin.cssmin
 };
+
 var activeMinifiers = [];
 for (var name in minifiers) {
   if (only.test(name))
@@ -106,7 +107,7 @@ var benchmark = function(filename) {
       var start = process.hrtime();
       var minified = minifiers[name](source);
       var itTook = process.hrtime(start);
-      var took = Math.round((1000 * itTook[0] + itTook[1] / 1000000)*100)/100;
+      var took = Math.round((1000 * itTook[0] + itTook[1] / 1000000) * 100) / 100;
 
       if (name == 'more-css' && minified.indexOf('Error: SyntaxError') === 0)
         throw new Error('pending more-css fix');
@@ -147,7 +148,7 @@ var benchmark = function(filename) {
     else
       formatted = valueStyled;
 
-    valueStyled = value = result.time+' ms';
+    valueStyled = value = result.time + ' ms';
 
     if (result.time == times[times.length - 1] && times.length > 1 && times[0] != times[times.length - 1])
       valueStyled = styled(value, 'red', 'danger');
@@ -158,7 +159,7 @@ var benchmark = function(filename) {
       formatted.timeClass = valueStyled.class || 'default';
     }
     else
-      formatted += ' - '+valueStyled;
+      formatted += ' - ' + valueStyled;
 
     return formatted;
   });
