@@ -22,7 +22,7 @@
     "check": "jshint ./bin/bench ."
   },
   "devDependencies": {
-    "clean-css": "2.2.x",
+    "clean-css": "3.0.x",
     "cli-table": "0.3.x",
     "colors": "1.0.x",
     "css-condense": "0.1.1",
