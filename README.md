@@ -30,6 +30,10 @@ Note that on Windows you will need to do `node ./bin/bench`
 
 If you prefer to see results without cloning the repo here are [the most recent ones](http://goalsmashers.github.io/css-minification-benchmark/).
 
+### How can I generate the html remport
+
+Just run `./bin/bench --html > report.html`
+
 ### How can I test my CSS file?
 
 Just copy your file to `data` directory (make sure filename ends with `.css`) and re-run the benchmark.
@@ -38,6 +42,10 @@ Please make sure your file does not contain any special comments (`/*! ... */`) 
 * `clean-css` has it configurable but leaves all by default
 * `csso` always leaves one
 * `ncss` and `ycssmin` always leave all
+
+### Can I get the total size and time for my CSS files?
+
+Copy all you files to `data` directory like before and run the benchmark with `--total`.
 
 ### How can I add a new minifier to the list?
 
