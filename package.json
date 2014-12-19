@@ -21,6 +21,7 @@
     "bench": "node ./bin/bench --html>index.html",
     "check": "jshint ./bin/bench ."
   },
+  "main": "lib/bench.js",
   "devDependencies": {
     "clean-css": "3.0.x",
     "cli-table": "0.3.x",
