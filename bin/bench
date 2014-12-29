@@ -16,5 +16,6 @@ var input = fs.readdirSync('data');
 bench({
   only: only,
   asHTML: process.argv.indexOf('--html') > -1,
-  total: process.argv.indexOf('--total') > -1
+  total: process.argv.indexOf('--total') > -1,
+  gzip: process.argv.indexOf('--gzip') > -1
 }, input, output);

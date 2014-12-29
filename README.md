@@ -60,6 +60,10 @@ Copy all you files to `data` directory like before and run the benchmark with `-
 
 Just run `./bin/bench --only ncss,ycssmin` (it's turned into `/.*(ncss|ycsmin).*/` regex)
 
+### Can I get the compressed gzip size as well?
+
+Run `./bin/bench --gzip` to measure the gzip size instead of the regular file size.
+
 ## License
 
 css-minification-benchmark is released under the [MIT License](https://github.com/GoalSmashers/clean-css/blob/master/LICENSE).
