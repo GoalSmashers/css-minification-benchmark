@@ -66,7 +66,7 @@ Run `./bin/bench --gzip` to measure the gzip size instead of the regular file si
 
 ### Can I get a more detailed table?
 
-You can split the size and time measure using `--verbose`.
+You can split the size and time measure using `--verbose`. You'll also get more information, like the speed-up or the relative percentage of different minifiers.
 
 ## License
 
