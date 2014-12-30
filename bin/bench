@@ -1,10 +1,7 @@
 #!/usr/bin/env node
 var fs = require('fs');
 var bench = require('../lib/bench');
-
-// mock it to drop output from ncss
-var output = process.stdout.write.bind(process.stdout);
-process.stdout.write = function() {};
+var processOutput = require('../lib/process-output');
 
 // ARGUMENTS
 var only = process.argv.indexOf('--only') > -1 ?
@@ -12,10 +9,14 @@ var only = process.argv.indexOf('--only') > -1 ?
   /.+/;
 
 var input = fs.readdirSync('data');
+var asHTML = process.argv.indexOf('--html') > -1;
+var measureGzip = process.argv.indexOf('--gzip') > -1;
+var total = process.argv.indexOf('--total') > -1;
+var verbose = process.argv.indexOf('--verbose') > -1;
+var output = processOutput.getOutput(asHTML, measureGzip, total, verbose);
 
 bench({
   only: only,
-  asHTML: process.argv.indexOf('--html') > -1,
-  total: process.argv.indexOf('--total') > -1,
-  gzip: process.argv.indexOf('--gzip') > -1
+  total: total,
+  gzip: measureGzip
 }, input, output);

@@ -64,6 +64,10 @@ Just run `./bin/bench --only ncss,ycssmin` (it's turned into `/.*(ncss|ycsmin).*
 
 Run `./bin/bench --gzip` to measure the gzip size instead of the regular file size.
 
+### Can I get a more detailed table?
+
+You can split the size and time measure using `--verbose`.
+
 ## License
 
 css-minification-benchmark is released under the [MIT License](https://github.com/GoalSmashers/clean-css/blob/master/LICENSE).
