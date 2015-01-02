@@ -10,11 +10,13 @@ process.stdout.write = function() {};
 var only = process.argv.indexOf('--only') > -1 ?
   new RegExp('.*(' + process.argv[process.argv.indexOf('--only') + 1].replace(/,/g, '|') + ').*') :
   /.+/;
+var asHTML = process.argv.indexOf('--html') > -1;
+var total = process.argv.indexOf('--total') > -1;
 
 var input = fs.readdirSync('data');
 
 bench({
   only: only,
-  asHTML: process.argv.indexOf('--html') > -1,
-  total: process.argv.indexOf('--total') > -1
+  asHTML: asHTML,
+  total: total
 }, input, output);
