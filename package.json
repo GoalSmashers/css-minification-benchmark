@@ -19,7 +19,8 @@
   ],
   "scripts": {
     "bench": "node ./bin/bench --html>index.html",
-    "check": "jshint ./bin/bench ."
+    "check": "jshint ./bin/bench .",
+    "test": "jshint ./bin/bench ."
   },
   "main": "lib/bench.js",
   "devDependencies": {
