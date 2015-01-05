@@ -21,7 +21,7 @@ A comparison of CSS minification engines.
 
 ### What are the results?
 
-Most of the time either `clean-css` or `csso` comes first. Although it depends on a particular CSS file.
+Most of the time `more-css` comes first although `clean-css` and `csso` come close. Test the minifiers with your CSS to find what works best for you.
 
 ### How can I see the results?
 
