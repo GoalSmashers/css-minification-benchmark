@@ -52,7 +52,7 @@ Copy all you files to `data` directory like before and run the benchmark with `-
 
 * add it to `package.json` as a `devDependency`
 * run `npm install`
-* require it in `bin/bench` and add it to `minifiers` hash
+* require it in `lib/minify.js` and add it to `minifiers` hash
 * re-run the benchmark
 * add it to this file in "Which engines are covered?" section above
 * send a PR (if you wish to have it included)
