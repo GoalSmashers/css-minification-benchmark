@@ -27,6 +27,7 @@
     "clean-css": "3.0.x",
     "cli-table": "0.3.x",
     "colors": "1.0.x",
+    "crass": "0.7.x",
     "css-condense": "0.1.1",
     "csso": "1.3.x",
     "cssshrink": "0.0.x",
