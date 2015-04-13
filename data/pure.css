@@ -1,21 +1,43 @@
 /*
-Pure v0.5.0
+Pure v0.6.0
 Copyright 2014 Yahoo! Inc. All rights reserved.
 Licensed under the BSD License.
-https://github.com/yui/pure/blob/master/LICENSE.md
+https://github.com/yahoo/pure/blob/master/LICENSE.md
 */
 /*
-normalize.css v1.1.3 | MIT License | git.io/normalize
+normalize.css v^3.0 | MIT License | git.io/normalize
 Copyright (c) Nicolas Gallagher and Jonathan Neal
 */
-/* normalize.css v1.1.3 | MIT License | git.io/normalize */
+/* normalize.css v3.0.2 | MIT License | git.io/normalize */
 
-/* ==========================================================================
-   HTML5 display definitions
+/**
+ * 1. Set default font family to sans-serif.
+ * 2. Prevent iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ */
+
+html {
+  font-family: sans-serif; /* 1 */
+  -ms-text-size-adjust: 100%; /* 2 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+}
+
+/**
+ * Remove default margin.
+ */
+
+body {
+  margin: 0;
+}
+
+/* HTML5 display definitions
    ========================================================================== */
 
 /**
- * Correct `block` display not defined in IE 6/7/8/9 and Firefox 3.
+ * Correct `block` display not defined for any HTML5 element in IE 8/9.
+ * Correct `block` display not defined for `details` or `summary` in IE 10/11
+ * and Firefox.
+ * Correct `block` display not defined for `main` in IE 11.
  */
 
 article,
@@ -27,22 +49,24 @@ footer,
 header,
 hgroup,
 main,
+menu,
 nav,
 section,
 summary {
-    display: block;
+  display: block;
 }
 
 /**
- * Correct `inline-block` display not defined in IE 6/7/8/9 and Firefox 3.
+ * 1. Correct `inline-block` display not defined in IE 8/9.
+ * 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
  */
 
 audio,
 canvas,
+progress,
 video {
-    display: inline-block;
-    *display: inline;
-    *zoom: 1;
+  display: inline-block; /* 1 */
+  vertical-align: baseline; /* 2 */
 }
 
 /**
@@ -51,67 +75,29 @@ video {
  */
 
 audio:not([controls]) {
-    display: none;
-    height: 0;
+  display: none;
+  height: 0;
 }
 
 /**
- * Address styling not present in IE 7/8/9, Firefox 3, and Safari 4.
- * Known issue: no IE 6 support.
+ * Address `[hidden]` styling not present in IE 8/9/10.
+ * Hide the `template` element in IE 8/9/11, Safari, and Firefox < 22.
  */
 
-[hidden] {
-    display: none;
+[hidden],
+template {
+  display: none;
 }
 
-/* ==========================================================================
-   Base
+/* Links
    ========================================================================== */
 
 /**
- * 1. Correct text resizing oddly in IE 6/7 when body `font-size` is set using
- *    `em` units.
- * 2. Prevent iOS text size adjust after orientation change, without disabling
- *    user zoom.
+ * Remove the gray background color from active links in IE 10.
  */
 
-html {
-    font-size: 100%; /* 1 */
-    -ms-text-size-adjust: 100%; /* 2 */
-    -webkit-text-size-adjust: 100%; /* 2 */
-}
-
-/**
- * Address `font-family` inconsistency between `textarea` and other form
- * elements.
- */
-
-html,
-button,
-input,
-select,
-textarea {
-    font-family: sans-serif;
-}
-
-/**
- * Address margins handled incorrectly in IE 6/7.
- */
-
-body {
-    margin: 0;
-}
-
-/* ==========================================================================
-   Links
-   ========================================================================== */
-
-/**
- * Address `outline` inconsistency between Chrome and other browsers.
- */
-
-a:focus {
-    outline: thin dotted;
+a {
+  background-color: transparent;
 }
 
 /**
@@ -120,146 +106,54 @@ a:focus {
 
 a:active,
 a:hover {
-    outline: 0;
+  outline: 0;
 }
 
-/* ==========================================================================
-   Typography
+/* Text-level semantics
    ========================================================================== */
 
 /**
- * Address font sizes and margins set differently in IE 6/7.
- * Address font sizes within `section` and `article` in Firefox 4+, Safari 5,
- * and Chrome.
- */
-
-h1 {
-    font-size: 2em;
-    margin: 0.67em 0;
-}
-
-h2 {
-    font-size: 1.5em;
-    margin: 0.83em 0;
-}
-
-h3 {
-    font-size: 1.17em;
-    margin: 1em 0;
-}
-
-h4 {
-    font-size: 1em;
-    margin: 1.33em 0;
-}
-
-h5 {
-    font-size: 0.83em;
-    margin: 1.67em 0;
-}
-
-h6 {
-    font-size: 0.67em;
-    margin: 2.33em 0;
-}
-
-/**
- * Address styling not present in IE 7/8/9, Safari 5, and Chrome.
+ * Address styling not present in IE 8/9/10/11, Safari, and Chrome.
  */
 
 abbr[title] {
-    border-bottom: 1px dotted;
+  border-bottom: 1px dotted;
 }
 
 /**
- * Address style set to `bolder` in Firefox 3+, Safari 4/5, and Chrome.
+ * Address style set to `bolder` in Firefox 4+, Safari, and Chrome.
  */
 
 b,
 strong {
-    font-weight: bold;
-}
-
-blockquote {
-    margin: 1em 40px;
+  font-weight: bold;
 }
 
 /**
- * Address styling not present in Safari 5 and Chrome.
+ * Address styling not present in Safari and Chrome.
  */
 
 dfn {
-    font-style: italic;
+  font-style: italic;
 }
 
 /**
- * Address differences between Firefox and other browsers.
- * Known issue: no IE 6/7 normalization.
+ * Address variable `h1` font-size and margin within `section` and `article`
+ * contexts in Firefox 4+, Safari, and Chrome.
  */
 
-hr {
-    -moz-box-sizing: content-box;
-    box-sizing: content-box;
-    height: 0;
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
 }
 
 /**
- * Address styling not present in IE 6/7/8/9.
+ * Address styling not present in IE 8/9.
  */
 
 mark {
-    background: #ff0;
-    color: #000;
-}
-
-/**
- * Address margins set differently in IE 6/7.
- */
-
-p,
-pre {
-    margin: 1em 0;
-}
-
-/**
- * Correct font family set oddly in IE 6, Safari 4/5, and Chrome.
- */
-
-code,
-kbd,
-pre,
-samp {
-    font-family: monospace, serif;
-    _font-family: 'courier new', monospace;
-    font-size: 1em;
-}
-
-/**
- * Improve readability of pre-formatted text in all browsers.
- */
-
-pre {
-    white-space: pre;
-    white-space: pre-wrap;
-    word-wrap: break-word;
-}
-
-/**
- * Address CSS quotes not supported in IE 6/7.
- */
-
-q {
-    quotes: none;
-}
-
-/**
- * Address `quotes` property not supported in Safari 4.
- */
-
-q:before,
-q:after {
-    content: '';
-    content: none;
+  background: #ff0;
+  color: #000;
 }
 
 /**
@@ -267,7 +161,7 @@ q:after {
  */
 
 small {
-    font-size: 80%;
+  font-size: 80%;
 }
 
 /**
@@ -276,165 +170,123 @@ small {
 
 sub,
 sup {
-    font-size: 75%;
-    line-height: 0;
-    position: relative;
-    vertical-align: baseline;
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
 }
 
 sup {
-    top: -0.5em;
+  top: -0.5em;
 }
 
 sub {
-    bottom: -0.25em;
+  bottom: -0.25em;
 }
 
-/* ==========================================================================
-   Lists
+/* Embedded content
    ========================================================================== */
 
 /**
- * Address margins set differently in IE 6/7.
- */
-
-dl,
-menu,
-ol,
-ul {
-    margin: 1em 0;
-}
-
-dd {
-    margin: 0 0 0 40px;
-}
-
-/**
- * Address paddings set differently in IE 6/7.
- */
-
-menu,
-ol,
-ul {
-    padding: 0 0 0 40px;
-}
-
-/**
- * Correct list images handled incorrectly in IE 7.
- */
-
-nav ul,
-nav ol {
-    list-style: none;
-    list-style-image: none;
-}
-
-/* ==========================================================================
-   Embedded content
-   ========================================================================== */
-
-/**
- * 1. Remove border when inside `a` element in IE 6/7/8/9 and Firefox 3.
- * 2. Improve image quality when scaled in IE 7.
+ * Remove border when inside `a` element in IE 8/9/10.
  */
 
 img {
-    border: 0; /* 1 */
-    -ms-interpolation-mode: bicubic; /* 2 */
+  border: 0;
 }
 
 /**
- * Correct overflow displayed oddly in IE 9.
+ * Correct overflow not hidden in IE 9/10/11.
  */
 
 svg:not(:root) {
-    overflow: hidden;
+  overflow: hidden;
 }
 
-/* ==========================================================================
-   Figures
+/* Grouping content
    ========================================================================== */
 
 /**
- * Address margin not present in IE 6/7/8/9, Safari 5, and Opera 11.
+ * Address margin not present in IE 8/9 and Safari.
  */
 
 figure {
-    margin: 0;
+  margin: 1em 40px;
 }
 
-/* ==========================================================================
-   Forms
+/**
+ * Address differences between Firefox and other browsers.
+ */
+
+hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+
+/**
+ * Contain overflow in all browsers.
+ */
+
+pre {
+  overflow: auto;
+}
+
+/**
+ * Address odd `em`-unit font size rendering in all browsers.
+ */
+
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+/* Forms
    ========================================================================== */
 
 /**
- * Correct margin displayed oddly in IE 6/7.
+ * Known limitation: by default, Chrome and Safari on OS X allow very limited
+ * styling of `select`, unless a `border` property is set.
  */
 
-form {
-    margin: 0;
-}
-
 /**
- * Define consistent border, margin, and padding.
- */
-
-fieldset {
-    border: 1px solid #c0c0c0;
-    margin: 0 2px;
-    padding: 0.35em 0.625em 0.75em;
-}
-
-/**
- * 1. Correct color not being inherited in IE 6/7/8/9.
- * 2. Correct text not wrapping in Firefox 3.
- * 3. Correct alignment displayed oddly in IE 6/7.
- */
-
-legend {
-    border: 0; /* 1 */
-    padding: 0;
-    white-space: normal; /* 2 */
-    *margin-left: -7px; /* 3 */
-}
-
-/**
- * 1. Correct font size not being inherited in all browsers.
- * 2. Address margins set differently in IE 6/7, Firefox 3+, Safari 5,
- *    and Chrome.
- * 3. Improve appearance and consistency in all browsers.
+ * 1. Correct color not being inherited.
+ *    Known issue: affects color of disabled elements.
+ * 2. Correct font properties not being inherited.
+ * 3. Address margins set differently in Firefox 4+, Safari, and Chrome.
  */
 
 button,
 input,
+optgroup,
 select,
 textarea {
-    font-size: 100%; /* 1 */
-    margin: 0; /* 2 */
-    vertical-align: baseline; /* 3 */
-    *vertical-align: middle; /* 3 */
+  color: inherit; /* 1 */
+  font: inherit; /* 2 */
+  margin: 0; /* 3 */
 }
 
 /**
- * Address Firefox 3+ setting `line-height` on `input` using `!important` in
- * the UA stylesheet.
+ * Address `overflow` set to `hidden` in IE 8/9/10/11.
  */
 
-button,
-input {
-    line-height: normal;
+button {
+  overflow: visible;
 }
 
 /**
  * Address inconsistent `text-transform` inheritance for `button` and `select`.
  * All other form control elements do not inherit `text-transform` values.
- * Correct `button` style inheritance in Chrome, Safari 5+, and IE 6+.
- * Correct `select` style inheritance in Firefox 4+ and Opera.
+ * Correct `button` style inheritance in Firefox, IE 8/9/10/11, and Opera.
+ * Correct `select` style inheritance in Firefox.
  */
 
 button,
 select {
-    text-transform: none;
+  text-transform: none;
 }
 
 /**
@@ -443,17 +295,14 @@ select {
  * 2. Correct inability to style clickable `input` types in iOS.
  * 3. Improve usability and consistency of cursor style between image-type
  *    `input` and others.
- * 4. Remove inner spacing in IE 7 without affecting normal text inputs.
- *    Known issue: inner spacing remains in IE 6.
  */
 
 button,
 html input[type="button"], /* 1 */
 input[type="reset"],
 input[type="submit"] {
-    -webkit-appearance: button; /* 2 */
-    cursor: pointer; /* 3 */
-    *overflow: visible;  /* 4 */
+  -webkit-appearance: button; /* 2 */
+  cursor: pointer; /* 3 */
 }
 
 /**
@@ -462,69 +311,115 @@ input[type="submit"] {
 
 button[disabled],
 html input[disabled] {
-    cursor: default;
+  cursor: default;
 }
 
 /**
- * 1. Address box sizing set to content-box in IE 8/9.
- * 2. Remove excess padding in IE 8/9.
- * 3. Remove excess padding in IE 7.
- *    Known issue: excess padding remains in IE 6.
- */
-
-input[type="checkbox"],
-input[type="radio"] {
-    box-sizing: border-box; /* 1 */
-    padding: 0; /* 2 */
-    *height: 13px; /* 3 */
-    *width: 13px; /* 3 */
-}
-
-/**
- * 1. Address `appearance` set to `searchfield` in Safari 5 and Chrome.
- * 2. Address `box-sizing` set to `border-box` in Safari 5 and Chrome
- *    (include `-moz` to future-proof).
- */
-
-input[type="search"] {
-    -webkit-appearance: textfield; /* 1 */
-    -moz-box-sizing: content-box;
-    -webkit-box-sizing: content-box; /* 2 */
-    box-sizing: content-box;
-}
-
-/**
- * Remove inner padding and search cancel button in Safari 5 and Chrome
- * on OS X.
- */
-
-input[type="search"]::-webkit-search-cancel-button,
-input[type="search"]::-webkit-search-decoration {
-    -webkit-appearance: none;
-}
-
-/**
- * Remove inner padding and border in Firefox 3+.
+ * Remove inner padding and border in Firefox 4+.
  */
 
 button::-moz-focus-inner,
 input::-moz-focus-inner {
-    border: 0;
-    padding: 0;
+  border: 0;
+  padding: 0;
 }
 
 /**
- * 1. Remove default vertical scrollbar in IE 6/7/8/9.
- * 2. Improve readability and alignment in all browsers.
+ * Address Firefox 4+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+
+input {
+  line-height: normal;
+}
+
+/**
+ * It's recommended that you don't attempt to style these elements.
+ * Firefox's implementation doesn't respect box-sizing, padding, or width.
+ *
+ * 1. Address box sizing set to `content-box` in IE 8/9/10.
+ * 2. Remove excess padding in IE 8/9/10.
+ */
+
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box; /* 1 */
+  padding: 0; /* 2 */
+}
+
+/**
+ * Fix the cursor style for Chrome's increment/decrement buttons. For certain
+ * `font-size` values of the `input`, it causes the cursor style of the
+ * decrement button to change from `default` to `text`.
+ */
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * 1. Address `appearance` set to `searchfield` in Safari and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari and Chrome
+ *    (include `-moz` to future-proof).
+ */
+
+input[type="search"] {
+  -webkit-appearance: textfield; /* 1 */
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box; /* 2 */
+  box-sizing: content-box;
+}
+
+/**
+ * Remove inner padding and search cancel button in Safari and Chrome on OS X.
+ * Safari (but not Chrome) clips the cancel button when the search input has
+ * padding (and `textfield` appearance).
+ */
+
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * Define consistent border, margin, and padding.
+ */
+
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+/**
+ * 1. Correct `color` not being inherited in IE 8/9/10/11.
+ * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+ */
+
+legend {
+  border: 0; /* 1 */
+  padding: 0; /* 2 */
+}
+
+/**
+ * Remove default vertical scrollbar in IE 8/9/10/11.
  */
 
 textarea {
-    overflow: auto; /* 1 */
-    vertical-align: top; /* 2 */
+  overflow: auto;
 }
 
-/* ==========================================================================
-   Tables
+/**
+ * Don't inherit the `font-weight` (applied by a rule above).
+ * NOTE: the default cannot safely be changed in Chrome and Safari on OS X.
+ */
+
+optgroup {
+  font-weight: bold;
+}
+
+/* Tables
    ========================================================================== */
 
 /**
@@ -532,8 +427,13 @@ textarea {
  */
 
 table {
-    border-collapse: collapse;
-    border-spacing: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td,
+th {
+  padding: 0;
 }
 
 /*csslint important:false*/
@@ -550,6 +450,7 @@ table {
  * Always hide an element when it has the `hidden` HTML attribute.
  */
 
+.hidden,
 [hidden] {
     display: none !important;
 }
@@ -574,7 +475,7 @@ table {
 
     /*
     Sets the font stack to fonts known to work properly with the above letter
-    and word spacings. See: https://github.com/yui/pure/issues/41/
+    and word spacings. See: https://github.com/yahoo/pure/issues/41/
 
     The following font stack makes Pure Grids work on all known environments.
 
@@ -603,6 +504,11 @@ table {
     /* IE10 uses display: flexbox */
     display: -ms-flexbox;
     -ms-flex-flow: row wrap;
+    
+    /* Prevents distributing space between rows */
+    -ms-align-content: flex-start;
+	-webkit-align-content: flex-start;
+	align-content: flex-start;
 }
 
 /* Opera as of 12 on Windows needs word-spacing.
@@ -846,11 +752,10 @@ this the same font stack that Normalize.css sets for the `body`.
 .pure-button {
     /* Structure */
     display: inline-block;
-    *display: inline; /*IE 6/7*/
     zoom: 1;
     line-height: normal;
     white-space: nowrap;
-    vertical-align: baseline;
+    vertical-align: middle;
     text-align: center;
     cursor: pointer;
     -webkit-user-drag: none;
@@ -858,6 +763,9 @@ this the same font stack that Normalize.css sets for the `body`.
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 /* Firefox: Get rid of the inner focus border */
@@ -871,12 +779,9 @@ this the same font stack that Normalize.css sets for the `body`.
 .pure-button {
     font-family: inherit;
     font-size: 100%;
-    *font-size: 90%; /*IE 6/7 - To reduce IE's oversized button text*/
-    *overflow: visible; /*IE 6/7 - Because of IE's overly large left/right padding on buttons */
     padding: 0.5em 1em;
     color: #444; /* rgba not supported (IE 8) */
     color: rgba(0, 0, 0, 0.80); /* rgba supported */
-    *color: #444; /* IE 6 & 7 */
     border: 1px solid #999;  /*IE 6/7/8*/
     border: none rgba(0, 0, 0, 0);  /*IE9 + everything else*/
     background-color: #E6E6E6;
@@ -900,6 +805,7 @@ this the same font stack that Normalize.css sets for the `body`.
 .pure-button-active,
 .pure-button:active {
     box-shadow: 0 0 0 1px rgba(0,0,0, 0.15) inset, 0 0 6px rgba(0,0,0, 0.20) inset;
+    border-color: #000\9;
 }
 
 .pure-button[disabled],
@@ -936,6 +842,14 @@ a.pure-button-selected {
     color: #fff;
 }
 
+/*csslint box-model:false*/
+/*
+Box-model set to false because we're setting a height on select elements, which
+also have border and padding. This is done because some browsers don't render
+the padding. We explicitly set the box-model for select elements to border-box,
+so we can ignore the csslint warning.
+*/
+
 .pure-form input[type="text"],
 .pure-form input[type="password"],
 .pure-form input[type="email"],
@@ -957,6 +871,7 @@ a.pure-button-selected {
     border: 1px solid #ccc;
     box-shadow: inset 0 1px 3px #ddd;
     border-radius: 4px;
+    vertical-align: middle;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
@@ -1002,7 +917,6 @@ since IE8 won't execute CSS that contains a CSS3 selector.
 .pure-form select:focus,
 .pure-form textarea:focus {
     outline: 0;
-    outline: thin dotted \9; /* IE6-9 */
     border-color: #129FEA;
 }
 
@@ -1012,14 +926,13 @@ since IE8 won't execute CSS that contains a CSS3 selector.
 */
 .pure-form input:not([type]):focus {
     outline: 0;
-    outline: thin dotted \9; /* IE6-9 */
     border-color: #129FEA;
 }
 
 .pure-form input[type="file"]:focus,
 .pure-form input[type="radio"]:focus,
 .pure-form input[type="checkbox"]:focus {
-    outline: thin dotted #333;
+    outline: thin solid #129FEA;
     outline: 1px auto #129FEA;
 }
 .pure-form .pure-checkbox,
@@ -1061,7 +974,7 @@ since IE8 won't execute CSS that contains a CSS3 selector.
 .pure-form input[readonly],
 .pure-form select[readonly],
 .pure-form textarea[readonly] {
-    background: #eee; /* menu hover bg color */
+    background-color: #eee; /* menu hover bg color */
     color: #777; /* menu text color */
     border-color: #ccc;
 }
@@ -1070,11 +983,6 @@ since IE8 won't execute CSS that contains a CSS3 selector.
 .pure-form textarea:focus:invalid,
 .pure-form select:focus:invalid {
     color: #b94a48;
-    border-color: #ee5f5b;
-}
-.pure-form input:focus:invalid:focus,
-.pure-form textarea:focus:invalid:focus,
-.pure-form select:focus:invalid:focus {
     border-color: #e9322d;
 }
 .pure-form input[type="file"]:focus:invalid:focus,
@@ -1083,6 +991,8 @@ since IE8 won't execute CSS that contains a CSS3 selector.
     outline-color: #e9322d;
 }
 .pure-form select {
+    /* Normalizes the height; padding is not sufficient. */
+    height: 2.25em;
     border: 1px solid #ccc;
     background-color: white;
 }
@@ -1120,6 +1030,7 @@ since IE8 won't execute CSS that contains a CSS3 selector.
 .pure-form-stacked input[type="search"],
 .pure-form-stacked input[type="tel"],
 .pure-form-stacked input[type="color"],
+.pure-form-stacked input[type="file"],
 .pure-form-stacked select,
 .pure-form-stacked label,
 .pure-form-stacked textarea {
@@ -1162,7 +1073,7 @@ since IE8 won't execute CSS that contains a CSS3 selector.
     margin: 0 1em 0 0;
 }
 .pure-form-aligned .pure-controls {
-    margin: 1.5em 0 0 10em;
+    margin: 1.5em 0 0 11em;
 }
 
 /* Rounded Inputs */
@@ -1176,24 +1087,36 @@ since IE8 won't execute CSS that contains a CSS3 selector.
 .pure-form .pure-group fieldset {
     margin-bottom: 10px;
 }
-.pure-form .pure-group input {
+.pure-form .pure-group input,
+.pure-form .pure-group textarea {
     display: block;
     padding: 10px;
-    margin: 0;
+    margin: 0 0 -1px;
     border-radius: 0;
     position: relative;
     top: -1px;
 }
-.pure-form .pure-group input:focus {
-    z-index: 2;
+.pure-form .pure-group input:focus,
+.pure-form .pure-group textarea:focus {
+    z-index: 3;
 }
-.pure-form .pure-group input:first-child {
+.pure-form .pure-group input:first-child,
+.pure-form .pure-group textarea:first-child {
     top: 1px;
     border-radius: 4px 4px 0 0;
+    margin: 0;
 }
-.pure-form .pure-group input:last-child {
+.pure-form .pure-group input:first-child:last-child,
+.pure-form .pure-group textarea:first-child:last-child {
+    top: 1px;
+    border-radius: 4px;
+    margin: 0;
+}
+.pure-form .pure-group input:last-child,
+.pure-form .pure-group textarea:last-child {
     top: -2px;
     border-radius: 0 0 4px 4px;
+    margin: 0;
 }
 .pure-form .pure-group button {
     margin: 0.35em 0;
@@ -1298,108 +1221,58 @@ since IE8 won't execute CSS that contains a CSS3 selector.
     }
 }
 
-/*csslint adjoining-classes:false, outline-none:false*/
-/*TODO: Remove this lint rule override after a refactor of this code.*/
-
-.pure-menu ul {
-    position: absolute;
-    visibility: hidden;
+/*csslint adjoining-classes: false, box-model:false*/
+.pure-menu {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
 }
 
-.pure-menu.pure-menu-open {
-    visibility: visible;
-    z-index: 2;
-    width: 100%;
+.pure-menu-fixed {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 3;
 }
 
-.pure-menu ul {
-    left: -10000px;
+.pure-menu-list,
+.pure-menu-item {
+    position: relative;
+}
+
+.pure-menu-list {
     list-style: none;
     margin: 0;
     padding: 0;
-    top: -10000px;
-    z-index: 1;
 }
 
-.pure-menu > ul { position: relative; }
-
-.pure-menu-open > ul {
-    left: 0;
-    top: 0;
-    visibility: visible;
+.pure-menu-item {
+    padding: 0;
+    margin: 0;
+    height: 100%;
 }
 
-.pure-menu-open > ul:focus {
-    outline: 0;
-}
-
-.pure-menu li { position: relative; }
-
-.pure-menu a,
-.pure-menu .pure-menu-heading {
+.pure-menu-link,
+.pure-menu-heading {
     display: block;
-    color: inherit;
-    line-height: 1.5em;
-    padding: 5px 20px;
     text-decoration: none;
     white-space: nowrap;
 }
 
-.pure-menu.pure-menu-horizontal > .pure-menu-heading {
-    display: inline-block;
-    *display: inline;
-    zoom: 1;
-    margin: 0;
-    vertical-align: middle;
-}
-.pure-menu.pure-menu-horizontal > ul {
-    display: inline-block;
-    *display: inline;
-    zoom: 1;
-    vertical-align: middle;
-}
-
-.pure-menu li a { padding: 5px 20px; }
-
-.pure-menu-can-have-children > .pure-menu-label:after {
-    content: '\25B8';
-    float: right;
-    /* These specific fonts have the Unicode char we need. */
-    font-family: 'Lucida Grande', 'Lucida Sans Unicode', 'DejaVu Sans', sans-serif;
-    margin-right: -20px;
-    margin-top: -1px;
-}
-
-.pure-menu-can-have-children > .pure-menu-label {
-    padding-right: 30px;
-}
-
-.pure-menu-separator {
-    background-color: #dfdfdf;
-    display: block;
-    height: 1px;
-    font-size: 0;
-    margin: 7px 2px;
-    overflow: hidden;
-}
-
-.pure-menu-hidden {
-    display: none;
-}
-
-/* FIXED MENU */
-.pure-menu-fixed {
-    position: fixed;
-    top: 0;
-    left: 0;
+/* HORIZONTAL MENU */
+.pure-menu-horizontal {
     width: 100%;
+    white-space: nowrap;
 }
 
-
-/* HORIZONTAL MENU CODE */
+.pure-menu-horizontal .pure-menu-list {
+    display: inline-block;
+}
 
 /* Initial menus should be inline-block so that they are horizontal */
-.pure-menu-horizontal li {
+.pure-menu-horizontal .pure-menu-item,
+.pure-menu-horizontal .pure-menu-heading,
+.pure-menu-horizontal .pure-menu-separator {
     display: inline-block;
     *display: inline;
     zoom: 1;
@@ -1407,186 +1280,122 @@ since IE8 won't execute CSS that contains a CSS3 selector.
 }
 
 /* Submenus should still be display: block; */
-.pure-menu-horizontal li li {
+.pure-menu-item .pure-menu-item {
     display: block;
 }
 
-/* Content after should be down arrow */
-.pure-menu-horizontal > .pure-menu-children > .pure-menu-can-have-children > .pure-menu-label:after {
+.pure-menu-children {
+    display: none;
+    position: absolute;
+    left: 100%;
+    top: 0;
+    margin: 0;
+    padding: 0;
+    z-index: 3;
+}
+
+.pure-menu-horizontal .pure-menu-children {
+    left: 0;
+    top: auto;
+    width: inherit;
+}
+
+.pure-menu-allow-hover:hover > .pure-menu-children,
+.pure-menu-active > .pure-menu-children {
+    display: block;
+    position: absolute;
+}
+
+/* Vertical Menus - show the dropdown arrow */
+.pure-menu-has-children > .pure-menu-link:after {
+    padding-left: 0.5em;
+    content: "\25B8";
+    font-size: small;
+}
+
+/* Horizontal Menus - show the dropdown arrow */
+.pure-menu-horizontal .pure-menu-has-children > .pure-menu-link:after {
     content: "\25BE";
 }
-/*Add extra padding to elements that have the arrow so that the hover looks nice */
-.pure-menu-horizontal > .pure-menu-children > .pure-menu-can-have-children > .pure-menu-label {
-    padding-right: 30px;
+
+/* scrollable menus */
+.pure-menu-scrollable {
+    overflow-y: scroll;
+    overflow-x: hidden;
 }
 
-/* Adjusting separator for vertical menus */
-.pure-menu-horizontal li.pure-menu-separator {
-	height: 50%;
-	width: 1px;
-	margin: 0 7px;
+.pure-menu-scrollable .pure-menu-list {
+    display: block;
 }
 
-/* Submenus should be horizontal separator again */
-.pure-menu-horizontal li li.pure-menu-separator {
-	height: 1px;
-	width: auto;
-	margin: 7px 2px;
+.pure-menu-horizontal.pure-menu-scrollable .pure-menu-list {
+    display: inline-block;
 }
 
-
-/*csslint adjoining-classes:false*/
-/*TODO: Remove this lint rule override after a refactor of this code.*/
-
-/* MAIN MENU STYLING */
-
-.pure-menu.pure-menu-open,
-.pure-menu.pure-menu-horizontal li .pure-menu-children {
-    background: #fff; /* Old browsers */
-    border: 1px solid #b7b7b7;
+.pure-menu-horizontal.pure-menu-scrollable {
+    white-space: nowrap;
+    overflow-y: hidden;
+    overflow-x: auto;
+    -ms-overflow-style: none;
+    -webkit-overflow-scrolling: touch;
+    /* a little extra padding for this style to allow for scrollbars */
+    padding: .5em 0;
 }
 
-/* remove borders for horizontal menus */
-.pure-menu.pure-menu-horizontal,
-.pure-menu.pure-menu-horizontal .pure-menu-heading {
-    border: none;
+.pure-menu-horizontal.pure-menu-scrollable::-webkit-scrollbar {
+    display: none;
 }
 
+/* misc default styling */
 
-/* LINK STYLES */
-
-.pure-menu a {
-    border: 1px solid transparent;
-    border-left: none;
-    border-right: none;
-
+.pure-menu-separator {
+    background-color: #ccc;
+    height: 1px;
+    margin: .3em 0;
 }
 
-.pure-menu a,
-.pure-menu .pure-menu-can-have-children > li:after {
+.pure-menu-horizontal .pure-menu-separator {
+    width: 1px;
+    height: 1.3em;
+    margin: 0 .3em ;
+}
+
+.pure-menu-heading {
+    text-transform: uppercase;
+    color: #565d64;
+}
+
+.pure-menu-link {
     color: #777;
 }
 
-.pure-menu .pure-menu-can-have-children > li:hover:after {
-    color: #fff;
+.pure-menu-children {
+    background-color: #fff;
 }
 
-/* Focus style for a dropdown menu-item when the parent has been opened */
-.pure-menu .pure-menu-open {
-    background: #dedede;
+.pure-menu-link,
+.pure-menu-disabled,
+.pure-menu-heading {
+    padding: .5em 1em;
 }
 
-
-.pure-menu li a:hover,
-.pure-menu li a:focus {
-    background: #eee;
+.pure-menu-disabled {
+    opacity: .5;
 }
 
-/* DISABLED STATES */
-.pure-menu li.pure-menu-disabled a:hover,
-.pure-menu li.pure-menu-disabled a:focus {
-    background: #fff;
-    color: #bfbfbf;
+.pure-menu-disabled .pure-menu-link:hover {
+    background-color: transparent;
 }
 
-.pure-menu .pure-menu-disabled > a {
-    background-image: none;
-    border-color: transparent;
-    cursor: default;
+.pure-menu-active > .pure-menu-link,
+.pure-menu-link:hover,
+.pure-menu-link:focus {
+    background-color: #eee;
 }
 
-.pure-menu .pure-menu-disabled > a,
-.pure-menu .pure-menu-can-have-children.pure-menu-disabled > a:after {
-    color: #bfbfbf;
-}
-
-/* HEADINGS */
-.pure-menu .pure-menu-heading {
-    color: #565d64;
-    text-transform: uppercase;
-    font-size: 90%;
-    margin-top: 0.5em;
-    border-bottom-width: 1px;
-    border-bottom-style: solid;
-    border-bottom-color: #dfdfdf;
-}
-
-/* ACTIVE MENU ITEM */
-.pure-menu .pure-menu-selected a {
+.pure-menu-selected .pure-menu-link,
+.pure-menu-selected .pure-menu-link:visited {
     color: #000;
-}
-
-/* FIXED MENU */
-.pure-menu.pure-menu-open.pure-menu-fixed {
-    border: none;
-    border-bottom: 1px solid #b7b7b7;
-}
-
-/*csslint box-model:false*/
-/*TODO: Remove this lint rule override after a refactor of this code.*/
-
-
-.pure-paginator {
-
-    /* `pure-g` Grid styles */
-    letter-spacing: -0.31em; /* Webkit: collapse white-space between units */
-    *letter-spacing: normal; /* reset IE < 8 */
-    *word-spacing: -0.43em; /* IE < 8: collapse white-space between units */
-    text-rendering: optimizespeed; /* Webkit: fixes text-rendering: optimizeLegibility */
-
-    /* `pure-paginator` Specific styles */
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-.opera-only :-o-prefocus,
-.pure-paginator {
-    word-spacing: -0.43em;
-}
-
-/* `pure-u` Grid styles */
-.pure-paginator li {
-    display: inline-block;
-    *display: inline; /* IE < 8: fake inline-block */
-    zoom: 1;
-    letter-spacing: normal;
-    word-spacing: normal;
-    vertical-align: top;
-    text-rendering: auto;
-}
-
-
-.pure-paginator .pure-button {
-    border-radius: 0;
-    padding: 0.8em 1.4em;
-    vertical-align: top;
-    height: 1.1em;
-}
-.pure-paginator .pure-button:focus,
-.pure-paginator .pure-button:active {
-    outline-style: none;
-}
-.pure-paginator .prev,
-.pure-paginator .next {
-    color: #C0C1C3;
-    text-shadow: 0 -1px 0 rgba(0,0,0, 0.45);
-}
-.pure-paginator .prev {
-    border-radius: 2px 0 0 2px;
-}
-.pure-paginator .next {
-    border-radius: 0 2px 2px 0;
-}
-
-@media (max-width: 480px) {
-    .pure-menu-horizontal {
-        width: 100%;
-    }
-
-    .pure-menu-children li {
-        display: block;
-        border-bottom: 1px solid black;
-    }
 }
 
 .pure-table {
@@ -1613,13 +1422,16 @@ since IE8 won't execute CSS that contains a CSS3 selector.
     overflow: visible; /*to make ths where the title is really long work*/
     padding: 0.5em 1em; /* cell padding */
 }
+
+/* Consider removing this next declaration block, as it causes problems when
+there's a rowspan on the first cell. Case added to the tests. issue#432 */
 .pure-table td:first-child,
 .pure-table th:first-child {
     border-left-width: 0;
 }
 
 .pure-table thead {
-    background: #e0e0e0;
+    background-color: #e0e0e0;
     color: #000;
     text-align: left;
     vertical-align: bottom;
@@ -1646,8 +1458,7 @@ striping:
 .pure-table-bordered td {
     border-bottom: 1px solid #cbcbcb;
 }
-.pure-table-bordered tbody > tr:last-child td,
-.pure-table-horizontal tbody > tr:last-child td {
+.pure-table-bordered tbody > tr:last-child > td {
     border-bottom-width: 0;
 }
 
@@ -1659,6 +1470,6 @@ striping:
     border-width: 0 0 1px 0;
     border-bottom: 1px solid #cbcbcb;
 }
-.pure-table-horizontal tbody > tr:last-child td {
+.pure-table-horizontal tbody > tr:last-child > td {
     border-bottom-width: 0;
 }
