@@ -1,5 +1,5 @@
-[![Linux Build Status](https://img.shields.io/travis/GoalSmashers/css-minification-benchmark.svg?style=flat)](https://travis-ci.org/GoalSmashers/css-minification-benchmark)
-[![devDependency Status](https://img.shields.io/david/dev/GoalSmashers/css-minification-benchmark.svg?style=flat)](https://david-dm.org/GoalSmashers/css-minification-benchmark#info=devDependencies)
+[![Linux Build Status](https://img.shields.io/travis/GoalSmashers/css-minification-benchmark.svg)](https://travis-ci.org/GoalSmashers/css-minification-benchmark)
+[![devDependency Status](https://img.shields.io/david/dev/GoalSmashers/css-minification-benchmark.svg)](https://david-dm.org/GoalSmashers/css-minification-benchmark#info=devDependencies)
 
 ## What is css-minification-benchmark?
 
