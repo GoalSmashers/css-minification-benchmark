@@ -28,17 +28,19 @@
     "cli-table": "0.3.x",
     "colors": "1.1.x",
     "crass": "0.7.x",
-    "css-condense": "0.1.1",
-    "cssnano": "2.6.x",
+    "css-condense": "0.1.x",
+    "cssnano": "3.3.x",
     "csso": "1.3.x",
     "cssshrink": "0.0.x",
-    "csswring": "3.0.x",
-    "gzip-size": "1.0.x",
+    "csswring": "4.0.x",
+    "es6-promise": "3.0.2",
+    "gzip-size": "3.0.x",
     "jshint": "2.8.x",
     "more-css": "0.12.x",
     "ncss": "1.1.x",
     "sqwish": "0.2.x",
-    "ycssmin": "1.0.x"
+    "ycssmin": "1.0.x",
+    "q": "1.4.1"
   },
   "engines": {
     "node": ">=0.10.0"
