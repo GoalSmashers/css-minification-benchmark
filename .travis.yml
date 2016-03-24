@@ -3,6 +3,13 @@ language: node_js
 node_js:
   - '0.10'
   - '4'
+before_install:
+  - if [ "$TRAVIS_NODE_VERSION" = "0.10" ]; then npm install -g npm@2; fi
 branches:
   only:
     - gh-pages
+matrix:
+  fast_finish: true
+cache:
+  directories:
+    - node_modules
