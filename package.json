@@ -30,7 +30,7 @@
     "crass": "0.7.x",
     "css-condense": "0.1.x",
     "cssnano": "3.5.x",
-    "csso": "1.6.x",
+    "csso": "1.7.x",
     "cssshrink": "0.0.x",
     "csswring": "4.2.x",
     "es6-promise": "3.1.2",
@@ -38,9 +38,9 @@
     "jshint": "2.9.x",
     "more-css": "0.12.x",
     "ncss": "1.1.x",
+    "q": "1.4.1",
     "sqwish": "0.2.x",
-    "ycssmin": "1.0.x",
-    "q": "1.4.1"
+    "ycssmin": "1.0.x"
   },
   "engines": {
     "node": ">=0.10.0"
