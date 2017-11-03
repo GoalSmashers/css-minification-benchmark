@@ -1,10 +1,11 @@
 highlighter: false
 
 exclude:
-- "bin"
-- "data"
-- "lib"
-- "node_modules"
-- "LICENSE"
-- "README.md"
-- "package.json"
+  - "bin"
+  - "data"
+  - "lib"
+  - "node_modules"
+  - "LICENSE"
+  - "README.md"
+  - "package.json"
+  - "package-lock.json"
