@@ -1,5 +1,5 @@
 [![Linux Build Status](https://img.shields.io/travis/GoalSmashers/css-minification-benchmark.svg)](https://travis-ci.org/GoalSmashers/css-minification-benchmark)
-[![devDependency Status](https://img.shields.io/david/dev/GoalSmashers/css-minification-benchmark.svg)](https://david-dm.org/GoalSmashers/css-minification-benchmark#info=devDependencies)
+[![devDependency Status](https://img.shields.io/david/dev/GoalSmashers/css-minification-benchmark.svg)](https://david-dm.org/GoalSmashers/css-minification-benchmark?type=dev)
 
 ## What is css-minification-benchmark?
 
@@ -31,7 +31,7 @@ Clone the repository first then run `./bin/bench`. That's it!
 
 Note that on Windows you will need to do `node ./bin/bench`
 
-If you prefer to see results without cloning the repo here are [the most recent ones](http://goalsmashers.github.io/css-minification-benchmark/).
+If you prefer to see results without cloning the repo here are [the most recent ones](https://goalsmashers.github.io/css-minification-benchmark/).
 
 ### How can I generate the html report?
 
