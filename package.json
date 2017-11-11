@@ -33,7 +33,6 @@
     "csso": "3.4.x",
     "cssshrink": "0.0.x",
     "csswring": "6.0.x",
-    "es6-promise": "4.1.1",
     "gzip-size": "4.0.x",
     "jshint": "2.9.x",
     "more-css": "0.12.x",
