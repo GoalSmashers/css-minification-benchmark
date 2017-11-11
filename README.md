@@ -17,7 +17,6 @@ A comparison of CSS minification engines.
 * [cssshrink](https://github.com/stoyan/cssshrink)
 * [csswring](https://github.com/hail2u/node-csswring)
 * [more-css](https://github.com/army8735/more)
-* [ncss](https://github.com/kurakin/ncss)
 * [sqwish](https://github.com/ded/sqwish)
 * [ycssmin](https://github.com/yui/ycssmin)
 
@@ -45,7 +44,7 @@ Please make sure your file does not contain any special comments (`/*! ... */`) 
 
 * `clean-css` is configurable, but leaves all by default
 * `csso` always leaves one
-* `ncss` and `ycssmin` always leave all
+* `ycssmin` always leave all
 
 ### Can I get the total size and time for my CSS files?
 
@@ -62,7 +61,7 @@ Copy all your files to the `data` directory like before and run the benchmark wi
 
 ### How can I compare a subset of minifiers?
 
-Just run `./bin/bench --only ncss,ycssmin` (it's turned into `/.*(ncss|ycsmin).*/` regex)
+Just run `./bin/bench --only csso,ycssmin` (it's turned into `/.*(csso|ycsmin).*/` regex)
 
 ### Can I get the compressed gzip size as well?
 
