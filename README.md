@@ -11,7 +11,6 @@ A comparison of CSS minification engines.
 
 * [clean-css](https://github.com/GoalSmashers/clean-css)
 * [crass](https://github.com/mattbasta/crass)
-* [css-condense](https://github.com/rstacruz/css-condense)
 * [cssnano](https://github.com/ben-eb/cssnano)
 * [csso](https://github.com/css/csso)
 * [cssshrink](https://github.com/stoyan/cssshrink)
