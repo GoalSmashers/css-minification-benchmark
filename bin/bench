@@ -1,4 +1,5 @@
 #!/usr/bin/env node
+
 var fs = require('fs');
 var processOutput = require('../lib/process-output');
 var bench = require('../lib/bench');
