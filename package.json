@@ -19,7 +19,8 @@
   ],
   "scripts": {
     "bench": "node ./bin/bench --html>index.html",
-    "check": "jshint ./bin/bench .",
+    "check": "npm run lint",
+    "lint": "eslint .",
     "test": "npm run check && npm run bench"
   },
   "main": "lib/bench.js",
@@ -32,8 +33,8 @@
     "csso": "3.4.x",
     "cssshrink": "0.0.x",
     "csswring": "6.0.x",
+    "eslint": "4.11.x",
     "gzip-size": "4.0.x",
-    "jshint": "2.9.x",
     "more-css": "0.12.x",
     "q": "1.5.x",
     "sqwish": "0.2.x",
@@ -41,5 +42,12 @@
   },
   "engines": {
     "node": ">=4"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": "eslint:recommended"
   }
 }
