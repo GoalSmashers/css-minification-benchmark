@@ -13,27 +13,21 @@ A comparison of CSS minification engines.
 * [crass](https://github.com/mattbasta/crass)
 * [cssnano](https://github.com/ben-eb/cssnano)
 * [csso](https://github.com/css/csso)
-* [cssshrink](https://github.com/stoyan/cssshrink)
 * [csswring](https://github.com/hail2u/node-csswring)
-* [more-css](https://github.com/army8735/more)
-* [sqwish](https://github.com/ded/sqwish)
-* [ycssmin](https://github.com/yui/ycssmin)
 
 ### What are the results?
 
-Most of the time `more-css` comes first although `clean-css` and `csso` come close. Test the minifiers with your CSS to find what works best for you.
+Most of the time `crass` comes first although `clean-css`, `cssnano` and `csso` come close. Test the minifiers with your CSS to find what works best for you.
 
 ### How can I see the results?
 
-Clone the repository first then run `./bin/bench`. That's it!
-
-Note that on Windows you will need to do `node ./bin/bench`
+Clone the repository first then run `node ./bin/bench`. That's it!
 
 If you prefer to see results without cloning the repo here are [the most recent ones](https://goalsmashers.github.io/css-minification-benchmark/).
 
 ### How can I generate the html report?
 
-Just run `./bin/bench --html > report.html`
+Just run `node ./bin/bench --html > report.html`
 
 ### How can I test my CSS file?
 
@@ -43,7 +37,6 @@ Please make sure your file does not contain any special comments (`/*! ... */`) 
 
 * `clean-css` is configurable, but leaves all by default
 * `csso` always leaves one
-* `ycssmin` always leave all
 
 ### Can I get the total size and time for my CSS files?
 
@@ -60,11 +53,11 @@ Copy all your files to the `data` directory like before and run the benchmark wi
 
 ### How can I compare a subset of minifiers?
 
-Just run `./bin/bench --only csso,ycssmin` (it's turned into `/.*(csso|ycsmin).*/` regex)
+Just run `node ./bin/bench --only csso,cssnano` (it's turned into `/.*(csso|cssnano).*/` regex)
 
 ### Can I get the compressed gzip size as well?
 
-Run `./bin/bench --gzip` to measure the gzip size instead of the regular file size.
+Run `node ./bin/bench --gzip` to measure the gzip size instead of the regular file size.
 
 ## License
 
