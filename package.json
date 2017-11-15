@@ -5,9 +5,10 @@
   "author": "Jakub Pawlowicz <jakub@goalsmashers.com>",
   "homepage": "https://github.com/GoalSmashers/css-minification-benchmark",
   "license": "MIT",
+  "private": true,
   "repository": {
     "type": "git",
-    "url": "https://github.com/GoalSmashers/css-minification-benchmark.git"
+    "url": "git+https://github.com/GoalSmashers/css-minification-benchmark.git"
   },
   "bugs": {
     "url": "https://github.com/GoalSmashers/css-minification-benchmark/issues"
@@ -23,7 +24,11 @@
     "lint": "eslint .",
     "test": "npm run check && npm run bench"
   },
+  "bin": {
+    "css-minification-benchmark": "bin/bench"
+  },
   "main": "lib/bench.js",
+  "dependencies": {},
   "devDependencies": {
     "clean-css": "4.1.x",
     "cli-table": "0.3.x",
@@ -36,6 +41,13 @@
     "gzip-size": "4.0.x",
     "q": "1.5.x"
   },
+  "files": [
+    "bin",
+    "data",
+    "lib",
+    "_config.yml",
+    "index.html"
+  ],
   "engines": {
     "node": ">=4"
   },
