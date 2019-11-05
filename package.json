@@ -37,7 +37,7 @@
     "cssnano": "3.10.x",
     "csso": "3.4.x",
     "csswring": "6.0.x",
-    "eslint": "4.11.x",
+    "eslint": "4.18.x",
     "gzip-size": "4.0.x",
     "q": "1.5.x"
   },
