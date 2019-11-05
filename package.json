@@ -21,7 +21,7 @@
   "scripts": {
     "bench": "node ./bin/bench --html>index.html",
     "check": "npm run lint",
-    "lint": "eslint .",
+    "lint": "eslint bin/bench .",
     "test": "npm run check && npm run bench"
   },
   "bin": {
@@ -37,7 +37,7 @@
     "cssnano": "^3.10.0",
     "csso": "^4.0.2",
     "csswring": "^6.0.3",
-    "eslint": "^4.19.1",
+    "eslint": "^5.16.0",
     "gzip-size": "^5.1.1",
     "q": "^1.5.1"
   },
