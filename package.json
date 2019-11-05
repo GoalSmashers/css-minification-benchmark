@@ -49,7 +49,7 @@
     "index.html"
   ],
   "engines": {
-    "node": ">=4"
+    "node": ">=6"
   },
   "eslintConfig": {
     "root": true,
