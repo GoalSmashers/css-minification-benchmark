@@ -1,14 +1,14 @@
-/*
-Pure v1.0.0
+/*!
+Pure v1.0.1
 Copyright 2013 Yahoo!
 Licensed under the BSD License.
-https://github.com/yahoo/pure/blob/master/LICENSE.md
+https://github.com/pure-css/pure/blob/master/LICENSE.md
 */
-/*
+/*!
 normalize.css v^3.0 | MIT License | git.io/normalize
 Copyright (c) Nicolas Gallagher and Jonathan Neal
 */
-/* normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
+/*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 
 /**
  * 1. Set default font family to sans-serif.
@@ -220,7 +220,8 @@ figure {
  */
 
 hr {
-  box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
   height: 0;
 }
 
@@ -343,7 +344,8 @@ input {
 
 input[type="checkbox"],
 input[type="radio"] {
-  box-sizing: border-box; /* 1 */
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; /* 1 */
   padding: 0; /* 2 */
 }
 
@@ -365,7 +367,8 @@ input[type="number"]::-webkit-outer-spin-button {
 
 input[type="search"] {
   -webkit-appearance: textfield; /* 1 */
-  box-sizing: content-box; /* 2 */
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box; /* 2 */
 }
 
 /**
@@ -472,7 +475,7 @@ th {
 
     /*
     Sets the font stack to fonts known to work properly with the above letter
-    and word spacings. See: https://github.com/yahoo/pure/issues/41/
+    and word spacings. See: https://github.com/pure-css/pure/issues/41/
 
     The following font stack makes Pure Grids work on all known environments.
 
@@ -493,6 +496,8 @@ th {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
     -webkit-flex-flow: row wrap;
         -ms-flex-flow: row wrap;
             flex-flow: row wrap;
@@ -762,7 +767,8 @@ this the same font stack that Normalize.css sets for the `body`.
        -moz-user-select: none;
         -ms-user-select: none;
             user-select: none;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
 }
 
 /* Firefox: Get rid of the inner focus border */
@@ -809,9 +815,7 @@ this the same font stack that Normalize.css sets for the `body`.
 .pure-button-hover,
 .pure-button:hover,
 .pure-button:focus {
-    /* csslint ignore:start */
-    filter: alpha(opacity=90);
-    /* csslint ignore:end */
+    background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(40%, rgba(0,0,0, 0.05)), to(rgba(0,0,0, 0.10)));
     background-image: -webkit-linear-gradient(transparent, rgba(0,0,0, 0.05) 40%, rgba(0,0,0, 0.10));
     background-image: linear-gradient(transparent, rgba(0,0,0, 0.05) 40%, rgba(0,0,0, 0.10));
 }
@@ -820,8 +824,9 @@ this the same font stack that Normalize.css sets for the `body`.
 }
 .pure-button-active,
 .pure-button:active {
-    box-shadow: 0 0 0 1px rgba(0,0,0, 0.15) inset, 0 0 6px rgba(0,0,0, 0.20) inset;
-    border-color: #000\9;
+    -webkit-box-shadow: 0 0 0 1px rgba(0,0,0, 0.15) inset, 0 0 6px rgba(0,0,0, 0.20) inset;
+            box-shadow: 0 0 0 1px rgba(0,0,0, 0.15) inset, 0 0 6px rgba(0,0,0, 0.20) inset;
+    border-color: #000;
 }
 
 .pure-button[disabled],
@@ -836,7 +841,8 @@ this the same font stack that Normalize.css sets for the `body`.
     /* csslint ignore:end */
     opacity: 0.40;
     cursor: not-allowed;
-    box-shadow: none;
+    -webkit-box-shadow: none;
+            box-shadow: none;
     pointer-events: none;
 }
 
@@ -898,10 +904,12 @@ so we can ignore the csslint warning.
     padding: 0.5em 0.6em;
     display: inline-block;
     border: 1px solid #ccc;
-    box-shadow: inset 0 1px 3px #ddd;
+    -webkit-box-shadow: inset 0 1px 3px #ddd;
+            box-shadow: inset 0 1px 3px #ddd;
     border-radius: 4px;
     vertical-align: middle;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
 }
 
 /*
@@ -912,9 +920,11 @@ since IE8 won't execute CSS that contains a CSS3 selector.
     padding: 0.5em 0.6em;
     display: inline-block;
     border: 1px solid #ccc;
-    box-shadow: inset 0 1px 3px #ddd;
+    -webkit-box-shadow: inset 0 1px 3px #ddd;
+            box-shadow: inset 0 1px 3px #ddd;
     border-radius: 4px;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
 }
 
 
@@ -1251,7 +1261,8 @@ since IE8 won't execute CSS that contains a CSS3 selector.
 
 /*csslint adjoining-classes: false, box-model:false*/
 .pure-menu {
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
 }
 
 .pure-menu-fixed {
@@ -1362,14 +1373,9 @@ since IE8 won't execute CSS that contains a CSS3 selector.
     white-space: nowrap;
     overflow-y: hidden;
     overflow-x: auto;
-    -ms-overflow-style: none;
     -webkit-overflow-scrolling: touch;
     /* a little extra padding for this style to allow for scrollbars */
     padding: .5em 0;
-}
-
-.pure-menu-horizontal.pure-menu-scrollable::-webkit-scrollbar {
-    display: none;
 }
 
 /* misc default styling */
@@ -1426,8 +1432,8 @@ since IE8 won't execute CSS that contains a CSS3 selector.
     background-color: #eee;
 }
 
-.pure-menu-selected .pure-menu-link,
-.pure-menu-selected .pure-menu-link:visited {
+.pure-menu-selected > .pure-menu-link,
+.pure-menu-selected > .pure-menu-link:visited {
     color: #000;
 }
 
@@ -1454,13 +1460,6 @@ since IE8 won't execute CSS that contains a CSS3 selector.
     margin: 0;
     overflow: visible; /*to make ths where the title is really long work*/
     padding: 0.5em 1em; /* cell padding */
-}
-
-/* Consider removing this next declaration block, as it causes problems when
-there's a rowspan on the first cell. Case added to the tests. issue#432 */
-.pure-table td:first-child,
-.pure-table th:first-child {
-    border-left-width: 0;
 }
 
 .pure-table thead {
