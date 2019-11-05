@@ -1,14 +1,10 @@
-sudo: false
 language: node_js
 node_js:
-  - "4"
   - "6"
   - "8"
+  - "10"
+  - "12"
 branches:
   only:
     - gh-pages
-matrix:
-  fast_finish: true
-cache:
-  directories:
-    - node_modules
+cache: npm
