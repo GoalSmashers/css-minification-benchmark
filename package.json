@@ -30,7 +30,7 @@
   "main": "lib/bench.js",
   "dependencies": {},
   "devDependencies": {
-    "clean-css": "4.1.x",
+    "clean-css": "^4.1.11",
     "cli-table": "0.3.x",
     "colors": "1.1.x",
     "crass": "0.11.x",
