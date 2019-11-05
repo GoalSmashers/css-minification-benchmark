@@ -1,4 +1,5 @@
 .DS_Store
+/.jekyll-cache/
 /_site/
 /node_modules/
 /npm-debug.log

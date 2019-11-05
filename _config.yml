@@ -1,5 +1,3 @@
-highlighter: false
-
 exclude:
   - "bin"
   - "data"
