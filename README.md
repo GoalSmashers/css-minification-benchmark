@@ -1,4 +1,4 @@
-[![Linux Build Status](https://img.shields.io/travis/GoalSmashers/css-minification-benchmark.svg)](https://travis-ci.org/GoalSmashers/css-minification-benchmark)
+[![Build Status](https://img.shields.io/travis/GoalSmashers/css-minification-benchmark.svg)](https://travis-ci.org/GoalSmashers/css-minification-benchmark)
 [![devDependency Status](https://img.shields.io/david/dev/GoalSmashers/css-minification-benchmark.svg)](https://david-dm.org/GoalSmashers/css-minification-benchmark?type=dev)
 
 ## What is css-minification-benchmark?
