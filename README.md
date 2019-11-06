@@ -21,7 +21,7 @@ Most of the time `crass` comes first although `clean-css`, `cssnano` and `csso` 
 
 ### How can I see the results?
 
-Clone the repository first then run `node ./bin/bench`. That's it!
+Clone the repository, install the dependencies with `npm install` and then run `node ./bin/bench`. That's it!
 
 If you prefer to see results without cloning the repo here are [the most recent ones](https://goalsmashers.github.io/css-minification-benchmark/).
 
