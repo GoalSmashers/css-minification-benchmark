@@ -35,6 +35,7 @@
     "colors": "^1.4.0",
     "crass": "^0.12.3",
     "cssnano": "^4.1.10",
+    "cssnano-preset-advanced": "^4.0.7",
     "csso": "^4.0.2",
     "csswring": "^7.0.0",
     "gzip-size": "^5.1.1",
