@@ -42,13 +42,6 @@
     "q": "^1.5.1",
     "xo": "^0.25.3"
   },
-  "files": [
-    "bin",
-    "data",
-    "lib",
-    "_config.yml",
-    "index.html"
-  ],
   "engines": {
     "node": ">=8.10.0"
   },
