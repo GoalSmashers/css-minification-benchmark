@@ -21,7 +21,7 @@
   "scripts": {
     "bench": "node ./bin/bench --html>index.html",
     "check": "npm run lint",
-    "lint": "eslint bin/bench .",
+    "lint": "xo",
     "test": "npm run check && npm run bench"
   },
   "bin": {
@@ -37,9 +37,9 @@
     "cssnano": "^4.1.10",
     "csso": "^4.0.2",
     "csswring": "^7.0.0",
-    "eslint": "^6.6.0",
     "gzip-size": "^5.1.1",
-    "q": "^1.5.1"
+    "q": "^1.5.1",
+    "xo": "^0.25.3"
   },
   "files": [
     "bin",
@@ -49,16 +49,44 @@
     "index.html"
   ],
   "engines": {
-    "node": ">=8"
+    "node": ">=8.10.0"
   },
-  "eslintConfig": {
-    "root": true,
-    "env": {
-      "node": true
-    },
-    "extends": "eslint:recommended",
+  "xo": {
+    "esnext": true,
+    "space": true,
     "rules": {
-      "no-lonely-if": "error"
+      "capitalized-comments": "off",
+      "curly": "off",
+      "import/no-unassigned-import": "off",
+      "new-cap": "off",
+      "no-eq-null": "off",
+      "no-mixed-operators": "off",
+      "no-negated-condition": "off",
+      "no-restricted-modules": "off",
+      "no-unused-vars": [
+        "error",
+        {
+          "caughtErrors": "none"
+        }
+      ],
+      "object-curly-spacing": [
+        "error",
+        "always"
+      ],
+      "prefer-const": [
+        "error",
+        {
+          "ignoreReadBeforeAssign": true
+        }
+      ],
+      "promise/prefer-await-to-then": "off",
+      "quote-props": [
+        "error",
+        "consistent"
+      ],
+      "spaced-comment": "off",
+      "unicorn/explicit-length-check": "off",
+      "unicorn/filename-case": "off"
     }
   }
 }

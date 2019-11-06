@@ -1,23 +1,18 @@
 #!/usr/bin/env node
 
-var fs = require('fs');
-var processOutput = require('../lib/process-output');
-var bench = require('../lib/bench');
+const fs = require('fs');
+const processOutput = require('../lib/process-output');
+const bench = require('../lib/bench');
 
 // ARGUMENTS
-var only = process.argv.indexOf('--only') > -1 ?
-  new RegExp('.*(' + process.argv[process.argv.indexOf('--only') + 1].replace(/,/g, '|') + ').*') :
+const only = process.argv.includes('--only') ?
+  new RegExp(`.*(${process.argv[process.argv.indexOf('--only') + 1].replace(/,/g, '|')}).*`) :
   /.+/;
-var asHTML = process.argv.indexOf('--html') > -1;
-var total = process.argv.indexOf('--total') > -1;
-var gzip = process.argv.indexOf('--gzip') > -1;
-var output = processOutput.getOutput(asHTML, gzip, total);
+const asHTML = process.argv.includes('--html');
+const total = process.argv.includes('--total');
+const gzip = process.argv.includes('--gzip');
+const output = processOutput.getOutput(asHTML, gzip, total);
 
-var input = fs.readdirSync('data');
+const input = fs.readdirSync('data');
 
-bench({
-  only: only,
-  asHTML: asHTML,
-  total: total,
-  gzip: gzip
-}, input, output);
+bench({ only, asHTML, total, gzip }, input, output);
