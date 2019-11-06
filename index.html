@@ -6,13 +6,18 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>css-minification-benchmark results</title>
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-<style>body{font-size:.9rem}th{text-align:center;vertical-align:middle!important}</style>
+<style>body{font-size:.9rem}.table thead th{text-align:center;vertical-align:middle}.table td{vertical-align:middle}</style>
 </head>
 <body>
+<div class="container-fluid">
+<div class="mt-2 mb-4 text-center">
+<h1 class="h3">CSS Minification Benchmark</h1>
+<a href="https://github.com/GoalSmashers/css-minification-benchmark" title="View the GitHub repository">GitHub</a>
+</div>
 <div class="table-responsive">
 <table class="table table-bordered table-sm table-hover table-striped">
 <thead><tr>
-<th>Generated on 2019-11-05</th>
+<th>File</th>
 <th><a href="https://github.com/jakubpawlowicz/clean-css">clean-css - 4.2.1</a></th>
 <th><a href="https://github.com/jakubpawlowicz/clean-css">clean-css (level 2) - 4.2.1</a></th>
 <th><a href="https://github.com/mattbasta/crass">crass - 0.12.3</a></th>
@@ -25,149 +30,151 @@
 <tbody>
 <tr>
 <td>960.css - <em>9989 bytes</em></td>
-<td><span class="badge badge-danger">5772 bytes</span><br><span class="badge badge-secondary">24.84 ms</span></td>
-<td><span class="badge badge-danger">5772 bytes</span><br><span class="badge badge-secondary">22.45 ms</span></td>
-<td><span class="badge badge-success">5713 bytes</span><br><span class="badge badge-secondary">74.39 ms</span></td>
-<td><span class="badge badge-success">5713 bytes</span><br><span class="badge badge-secondary">46.4 ms</span></td>
-<td><span class="badge badge-danger">5772 bytes</span><br><span class="badge badge-danger">692.8 ms</span></td>
-<td><span class="badge badge-secondary">5768 bytes</span><br><span class="badge badge-secondary">20.75 ms</span></td>
-<td><span class="badge badge-danger">5772 bytes</span><br><span class="badge badge-success">5.92 ms</span></td>
-<td><span class="badge badge-danger">5772 bytes</span><br><span class="badge badge-secondary">10.79 ms</span></td>
+<td><span class="badge badge-danger">5772 bytes</span><br><span class="badge badge-secondary">58.97 ms</span></td>
+<td><span class="badge badge-danger">5772 bytes</span><br><span class="badge badge-secondary">56.42 ms</span></td>
+<td><span class="badge badge-success">5713 bytes</span><br><span class="badge badge-secondary">145.16 ms</span></td>
+<td><span class="badge badge-success">5713 bytes</span><br><span class="badge badge-secondary">115.08 ms</span></td>
+<td><span class="badge badge-danger">5772 bytes</span><br><span class="badge badge-danger">538.54 ms</span></td>
+<td><span class="badge badge-secondary">5768 bytes</span><br><span class="badge badge-secondary">41.5 ms</span></td>
+<td><span class="badge badge-danger">5772 bytes</span><br><span class="badge badge-secondary">17.2 ms</span></td>
+<td><span class="badge badge-danger">5772 bytes</span><br><span class="badge badge-success">15.25 ms</span></td>
 </tr>
 <tr>
 <td>animate.css - <em>77907 bytes</em></td>
-<td><span class="badge badge-danger">60697 bytes</span><br><span class="badge badge-secondary">97.29 ms</span></td>
-<td><span class="badge badge-secondary">59933 bytes</span><br><span class="badge badge-secondary">116.85 ms</span></td>
-<td><span class="badge badge-success">38879 bytes</span><br><span class="badge badge-danger">249.13 ms</span></td>
-<td><span class="badge badge-secondary">57585 bytes</span><br><span class="badge badge-secondary">197.72 ms</span></td>
-<td><span class="badge badge-secondary">58108 bytes</span><br><span class="badge badge-secondary">142.78 ms</span></td>
-<td><span class="badge badge-secondary">59314 bytes</span><br><span class="badge badge-secondary">68.94 ms</span></td>
-<td><span class="badge badge-secondary">60439 bytes</span><br><span class="badge badge-success">39.98 ms</span></td>
-<td><span class="badge badge-secondary">60696 bytes</span><br><span class="badge badge-secondary">54.66 ms</span></td>
+<td><span class="badge badge-danger">60697 bytes</span><br><span class="badge badge-secondary">212.7 ms</span></td>
+<td><span class="badge badge-secondary">59933 bytes</span><br><span class="badge badge-secondary">226.74 ms</span></td>
+<td><span class="badge badge-success">38879 bytes</span><br><span class="badge badge-danger">420.43 ms</span></td>
+<td><span class="badge badge-secondary">57585 bytes</span><br><span class="badge badge-secondary">260.81 ms</span></td>
+<td><span class="badge badge-secondary">58108 bytes</span><br><span class="badge badge-secondary">246.44 ms</span></td>
+<td><span class="badge badge-secondary">59314 bytes</span><br><span class="badge badge-secondary">158.95 ms</span></td>
+<td><span class="badge badge-secondary">60439 bytes</span><br><span class="badge badge-success">102.54 ms</span></td>
+<td><span class="badge badge-secondary">60696 bytes</span><br><span class="badge badge-secondary">107.99 ms</span></td>
 </tr>
 <tr>
 <td>blueprint.css - <em>17422 bytes</em></td>
-<td><span class="badge badge-danger">10796 bytes</span><br><span class="badge badge-secondary">29.7 ms</span></td>
-<td><span class="badge badge-secondary">10646 bytes</span><br><span class="badge badge-secondary">59.7 ms</span></td>
-<td><span class="badge badge-success">10502 bytes</span><br><span class="badge badge-danger">96.18 ms</span></td>
-<td><span class="badge badge-secondary">10660 bytes</span><br><span class="badge badge-secondary">50.47 ms</span></td>
-<td><span class="badge badge-secondary">10696 bytes</span><br><span class="badge badge-secondary">86.45 ms</span></td>
-<td><span class="badge badge-secondary">10706 bytes</span><br><span class="badge badge-secondary">27.94 ms</span></td>
-<td><span class="badge badge-secondary">10790 bytes</span><br><span class="badge badge-success">6.76 ms</span></td>
-<td><span class="badge badge-secondary">10785 bytes</span><br><span class="badge badge-secondary">17.68 ms</span></td>
+<td><span class="badge badge-danger">10796 bytes</span><br><span class="badge badge-secondary">79.2 ms</span></td>
+<td><span class="badge badge-secondary">10646 bytes</span><br><span class="badge badge-secondary">146.28 ms</span></td>
+<td><span class="badge badge-success">10502 bytes</span><br><span class="badge badge-secondary">112.65 ms</span></td>
+<td><span class="badge badge-secondary">10660 bytes</span><br><span class="badge badge-secondary">84.37 ms</span></td>
+<td><span class="badge badge-secondary">10696 bytes</span><br><span class="badge badge-danger">154.27 ms</span></td>
+<td><span class="badge badge-secondary">10706 bytes</span><br><span class="badge badge-secondary">74.63 ms</span></td>
+<td><span class="badge badge-secondary">10790 bytes</span><br><span class="badge badge-success">18.42 ms</span></td>
+<td><span class="badge badge-secondary">10785 bytes</span><br><span class="badge badge-secondary">31.77 ms</span></td>
 </tr>
 <tr>
 <td>bootstrap.css - <em>192348 bytes</em></td>
-<td><span class="badge badge-secondary">155712 bytes</span><br><span class="badge badge-secondary">370.41 ms</span></td>
-<td><span class="badge badge-secondary">153787 bytes</span><br><span class="badge badge-secondary">407.34 ms</span></td>
-<td><span class="badge badge-success">151949 bytes</span><br><span class="badge badge-danger">1259.8 ms</span></td>
-<td><span class="badge badge-secondary">152056 bytes</span><br><span class="badge badge-secondary">835.52 ms</span></td>
-<td><span class="badge badge-secondary">154515 bytes</span><br><span class="badge badge-secondary">591.9 ms</span></td>
-<td><span class="badge badge-secondary">153853 bytes</span><br><span class="badge badge-secondary">185.37 ms</span></td>
-<td><span class="badge badge-danger">155732 bytes</span><br><span class="badge badge-success">75.9 ms</span></td>
-<td><span class="badge badge-secondary">155439 bytes</span><br><span class="badge badge-secondary">111.15 ms</span></td>
+<td><span class="badge badge-secondary">155712 bytes</span><br><span class="badge badge-secondary">966.45 ms</span></td>
+<td><span class="badge badge-secondary">153787 bytes</span><br><span class="badge badge-secondary">651.32 ms</span></td>
+<td><span class="badge badge-success">151949 bytes</span><br><span class="badge badge-danger">1854.66 ms</span></td>
+<td><span class="badge badge-secondary">152056 bytes</span><br><span class="badge badge-secondary">987.96 ms</span></td>
+<td><span class="badge badge-secondary">154515 bytes</span><br><span class="badge badge-secondary">885.67 ms</span></td>
+<td><span class="badge badge-secondary">153853 bytes</span><br><span class="badge badge-secondary">359.6 ms</span></td>
+<td><span class="badge badge-danger">155732 bytes</span><br><span class="badge badge-secondary">142.84 ms</span></td>
+<td><span class="badge badge-secondary">155439 bytes</span><br><span class="badge badge-success">135.63 ms</span></td>
 </tr>
 <tr>
 <td>font-awesome.css - <em>37413 bytes</em></td>
-<td><span class="badge badge-secondary">30426 bytes</span><br><span class="badge badge-secondary">69.69 ms</span></td>
-<td><span class="badge badge-success">30405 bytes</span><br><span class="badge badge-secondary">19.21 ms</span></td>
-<td><span class="badge badge-secondary">30605 bytes</span><br><span class="badge badge-danger">217.79 ms</span></td>
-<td><span class="badge badge-secondary">30717 bytes</span><br><span class="badge badge-secondary">128.1 ms</span></td>
-<td><span class="badge badge-danger">30798 bytes</span><br><span class="badge badge-secondary">98 ms</span></td>
-<td><span class="badge badge-secondary">30773 bytes</span><br><span class="badge badge-secondary">23.7 ms</span></td>
-<td><span class="badge badge-secondary">30785 bytes</span><br><span class="badge badge-success">6.66 ms</span></td>
-<td><span class="badge badge-secondary">30772 bytes</span><br><span class="badge badge-secondary">16.8 ms</span></td>
+<td><span class="badge badge-secondary">30426 bytes</span><br><span class="badge badge-secondary">194.75 ms</span></td>
+<td><span class="badge badge-success">30405 bytes</span><br><span class="badge badge-secondary">33.17 ms</span></td>
+<td><span class="badge badge-secondary">30605 bytes</span><br><span class="badge badge-danger">340.56 ms</span></td>
+<td><span class="badge badge-secondary">30717 bytes</span><br><span class="badge badge-secondary">172.53 ms</span></td>
+<td><span class="badge badge-danger">30798 bytes</span><br><span class="badge badge-secondary">157.25 ms</span></td>
+<td><span class="badge badge-secondary">30773 bytes</span><br><span class="badge badge-secondary">45.46 ms</span></td>
+<td><span class="badge badge-secondary">30785 bytes</span><br><span class="badge badge-success">12.39 ms</span></td>
+<td><span class="badge badge-secondary">30772 bytes</span><br><span class="badge badge-secondary">16.57 ms</span></td>
 </tr>
 <tr>
 <td>foundation.css - <em>185960 bytes</em></td>
-<td><span class="badge badge-secondary">145116 bytes</span><br><span class="badge badge-secondary">339.95 ms</span></td>
-<td><span class="badge badge-secondary">135095 bytes</span><br><span class="badge badge-secondary">135.2 ms</span></td>
-<td><span class="badge badge-secondary">133029 bytes</span><br><span class="badge badge-danger">881.95 ms</span></td>
-<td><span class="badge badge-secondary">137302 bytes</span><br><span class="badge badge-secondary">648.08 ms</span></td>
-<td><span class="badge badge-secondary">138986 bytes</span><br><span class="badge badge-secondary">386.4 ms</span></td>
-<td><span class="badge badge-success">130112 bytes</span><br><span class="badge badge-secondary">98.35 ms</span></td>
-<td><span class="badge badge-danger">145325 bytes</span><br><span class="badge badge-success">33.11 ms</span></td>
-<td><span class="badge badge-secondary">145092 bytes</span><br><span class="badge badge-secondary">105.99 ms</span></td>
+<td><span class="badge badge-secondary">145116 bytes</span><br><span class="badge badge-secondary">821.14 ms</span></td>
+<td><span class="badge badge-secondary">135095 bytes</span><br><span class="badge badge-secondary">646.53 ms</span></td>
+<td><span class="badge badge-secondary">133029 bytes</span><br><span class="badge badge-danger">1079.46 ms</span></td>
+<td><span class="badge badge-secondary">137302 bytes</span><br><span class="badge badge-secondary">700.34 ms</span></td>
+<td><span class="badge badge-secondary">138986 bytes</span><br><span class="badge badge-secondary">558.94 ms</span></td>
+<td><span class="badge badge-success">130112 bytes</span><br><span class="badge badge-secondary">158.16 ms</span></td>
+<td><span class="badge badge-danger">145325 bytes</span><br><span class="badge badge-success">55.32 ms</span></td>
+<td><span class="badge badge-secondary">145092 bytes</span><br><span class="badge badge-secondary">108.66 ms</span></td>
 </tr>
 <tr>
 <td>gumby.css - <em>167123 bytes</em></td>
-<td><span class="badge badge-secondary">151417 bytes</span><br><span class="badge badge-secondary">139.9 ms</span></td>
-<td><span class="badge badge-secondary">149564 bytes</span><br><span class="badge badge-secondary">91.94 ms</span></td>
-<td><span class="badge badge-success">128427 bytes</span><br><span class="badge badge-danger">1007.95 ms</span></td>
-<td><span class="badge badge-secondary">128651 bytes</span><br><span class="badge badge-secondary">714.52 ms</span></td>
-<td><span class="badge badge-secondary">147887 bytes</span><br><span class="badge badge-secondary">424.52 ms</span></td>
-<td><span class="badge badge-secondary">149653 bytes</span><br><span class="badge badge-secondary">133.66 ms</span></td>
-<td><span class="badge badge-danger">151757 bytes</span><br><span class="badge badge-success">38.34 ms</span></td>
-<td><span class="badge badge-secondary">151650 bytes</span><br><span class="badge badge-secondary">62.22 ms</span></td>
+<td><span class="badge badge-secondary">151417 bytes</span><br><span class="badge badge-secondary">378.8 ms</span></td>
+<td><span class="badge badge-secondary">149564 bytes</span><br><span class="badge badge-secondary">201.1 ms</span></td>
+<td><span class="badge badge-success">128427 bytes</span><br><span class="badge badge-danger">1326.9 ms</span></td>
+<td><span class="badge badge-secondary">128651 bytes</span><br><span class="badge badge-secondary">772.63 ms</span></td>
+<td><span class="badge badge-secondary">147887 bytes</span><br><span class="badge badge-secondary">611.35 ms</span></td>
+<td><span class="badge badge-secondary">149653 bytes</span><br><span class="badge badge-secondary">241.76 ms</span></td>
+<td><span class="badge badge-danger">151757 bytes</span><br><span class="badge badge-success">57.4 ms</span></td>
+<td><span class="badge badge-secondary">151650 bytes</span><br><span class="badge badge-secondary">81.4 ms</span></td>
 </tr>
 <tr>
 <td>inuit.css - <em>53049 bytes</em></td>
-<td><span class="badge badge-secondary">18125 bytes</span><br><span class="badge badge-secondary">14.83 ms</span></td>
-<td><span class="badge badge-secondary">17576 bytes</span><br><span class="badge badge-secondary">19.38 ms</span></td>
-<td><span class="badge badge-success">17512 bytes</span><br><span class="badge badge-danger">91.06 ms</span></td>
-<td><span class="badge badge-secondary">17627 bytes</span><br><span class="badge badge-secondary">72.44 ms</span></td>
-<td><span class="badge badge-secondary">18045 bytes</span><br><span class="badge badge-secondary">47.25 ms</span></td>
-<td><span class="badge badge-secondary">17815 bytes</span><br><span class="badge badge-secondary">14.5 ms</span></td>
-<td><span class="badge badge-secondary">18182 bytes</span><br><span class="badge badge-success">4.7 ms</span></td>
-<td><span class="badge badge-danger">18185 bytes</span><br><span class="badge badge-secondary">16.49 ms</span></td>
+<td><span class="badge badge-secondary">18125 bytes</span><br><span class="badge badge-secondary">35.98 ms</span></td>
+<td><span class="badge badge-secondary">17576 bytes</span><br><span class="badge badge-secondary">46.2 ms</span></td>
+<td><span class="badge badge-success">17512 bytes</span><br><span class="badge badge-danger">144.45 ms</span></td>
+<td><span class="badge badge-secondary">17627 bytes</span><br><span class="badge badge-secondary">99.39 ms</span></td>
+<td><span class="badge badge-secondary">18045 bytes</span><br><span class="badge badge-secondary">71.84 ms</span></td>
+<td><span class="badge badge-secondary">17815 bytes</span><br><span class="badge badge-secondary">27.38 ms</span></td>
+<td><span class="badge badge-secondary">18182 bytes</span><br><span class="badge badge-success">7.09 ms</span></td>
+<td><span class="badge badge-danger">18185 bytes</span><br><span class="badge badge-secondary">17.5 ms</span></td>
 </tr>
 <tr>
 <td>normalize.css - <em>6138 bytes</em></td>
-<td><span class="badge badge-secondary">1815 bytes</span><br><span class="badge badge-secondary">1.1 ms</span></td>
-<td><span class="badge badge-secondary">1742 bytes</span><br><span class="badge badge-secondary">3.92 ms</span></td>
-<td><span class="badge badge-success">1651 bytes</span><br><span class="badge badge-secondary">4.24 ms</span></td>
-<td><span class="badge badge-secondary">1697 bytes</span><br><span class="badge badge-secondary">3.49 ms</span></td>
-<td><span class="badge badge-secondary">1802 bytes</span><br><span class="badge badge-danger">8.55 ms</span></td>
-<td><span class="badge badge-secondary">1692 bytes</span><br><span class="badge badge-secondary">1.49 ms</span></td>
-<td><span class="badge badge-danger">1816 bytes</span><br><span class="badge badge-success">0.48 ms</span></td>
-<td><span class="badge badge-secondary">1815 bytes</span><br><span class="badge badge-secondary">2.04 ms</span></td>
+<td><span class="badge badge-secondary">1815 bytes</span><br><span class="badge badge-secondary">3.67 ms</span></td>
+<td><span class="badge badge-secondary">1742 bytes</span><br><span class="badge badge-secondary">3.7 ms</span></td>
+<td><span class="badge badge-success">1651 bytes</span><br><span class="badge badge-secondary">7.21 ms</span></td>
+<td><span class="badge badge-secondary">1697 bytes</span><br><span class="badge badge-secondary">5.17 ms</span></td>
+<td><span class="badge badge-secondary">1802 bytes</span><br><span class="badge badge-danger">11.01 ms</span></td>
+<td><span class="badge badge-secondary">1692 bytes</span><br><span class="badge badge-secondary">2.74 ms</span></td>
+<td><span class="badge badge-danger">1816 bytes</span><br><span class="badge badge-success">1.1 ms</span></td>
+<td><span class="badge badge-secondary">1815 bytes</span><br><span class="badge badge-secondary">5.56 ms</span></td>
 </tr>
 <tr>
 <td>oocss.css - <em>40151 bytes</em></td>
-<td><span class="badge badge-secondary">14493 bytes</span><br><span class="badge badge-secondary">32.62 ms</span></td>
-<td><span class="badge badge-secondary">14167 bytes</span><br><span class="badge badge-secondary">17.77 ms</span></td>
-<td><span class="badge badge-success">13952 bytes</span><br><span class="badge badge-danger">53.36 ms</span></td>
-<td><span class="badge badge-secondary">14100 bytes</span><br><span class="badge badge-secondary">43.23 ms</span></td>
-<td><span class="badge badge-secondary">14533 bytes</span><br><span class="badge badge-secondary">50.08 ms</span></td>
-<td><span class="badge badge-secondary">14476 bytes</span><br><span class="badge badge-secondary">10.75 ms</span></td>
+<td><span class="badge badge-secondary">14493 bytes</span><br><span class="badge badge-secondary">18.85 ms</span></td>
+<td><span class="badge badge-secondary">14167 bytes</span><br><span class="badge badge-secondary">37.26 ms</span></td>
+<td><span class="badge badge-success">13952 bytes</span><br><span class="badge badge-secondary">68.96 ms</span></td>
+<td><span class="badge badge-secondary">14100 bytes</span><br><span class="badge badge-secondary">57.14 ms</span></td>
+<td><span class="badge badge-secondary">14533 bytes</span><br><span class="badge badge-danger">73.01 ms</span></td>
+<td><span class="badge badge-secondary">14476 bytes</span><br><span class="badge badge-secondary">15.15 ms</span></td>
 <td><span class="badge badge-danger">14723 bytes</span><br><span class="badge badge-success">6.16 ms</span></td>
-<td><span class="badge badge-secondary">14494 bytes</span><br><span class="badge badge-secondary">12.05 ms</span></td>
+<td><span class="badge badge-secondary">14494 bytes</span><br><span class="badge badge-secondary">11.81 ms</span></td>
 </tr>
 <tr>
 <td>pure.css - <em>32264 bytes</em></td>
-<td><span class="badge badge-secondary">17213 bytes</span><br><span class="badge badge-secondary">6.41 ms</span></td>
-<td><span class="badge badge-secondary">16920 bytes</span><br><span class="badge badge-secondary">13.88 ms</span></td>
-<td><span class="badge badge-success">16148 bytes</span><br><span class="badge badge-secondary">52.87 ms</span></td>
-<td><span class="badge badge-secondary">16393 bytes</span><br><span class="badge badge-danger">75.64 ms</span></td>
-<td><span class="badge badge-secondary">17673 bytes</span><br><span class="badge badge-secondary">61.86 ms</span></td>
-<td><span class="badge badge-danger">17932 bytes</span><br><span class="badge badge-secondary">9.53 ms</span></td>
-<td><span class="badge badge-secondary">17811 bytes</span><br><span class="badge badge-success">4.31 ms</span></td>
-<td><span class="badge badge-secondary">17232 bytes</span><br><span class="badge badge-secondary">13.48 ms</span></td>
+<td><span class="badge badge-secondary">17213 bytes</span><br><span class="badge badge-secondary">17.93 ms</span></td>
+<td><span class="badge badge-secondary">16920 bytes</span><br><span class="badge badge-secondary">29.14 ms</span></td>
+<td><span class="badge badge-success">16148 bytes</span><br><span class="badge badge-danger">96.07 ms</span></td>
+<td><span class="badge badge-secondary">16393 bytes</span><br><span class="badge badge-secondary">86.24 ms</span></td>
+<td><span class="badge badge-secondary">17673 bytes</span><br><span class="badge badge-secondary">86.48 ms</span></td>
+<td><span class="badge badge-danger">17932 bytes</span><br><span class="badge badge-secondary">15.51 ms</span></td>
+<td><span class="badge badge-secondary">17811 bytes</span><br><span class="badge badge-success">8.66 ms</span></td>
+<td><span class="badge badge-secondary">17232 bytes</span><br><span class="badge badge-secondary">16.96 ms</span></td>
 </tr>
 <tr>
 <td>reset.css - <em>1092 bytes</em></td>
-<td><span class="badge badge-danger">773 bytes</span><br><span class="badge badge-secondary">0.5 ms</span></td>
-<td><span class="badge badge-danger">773 bytes</span><br><span class="badge badge-secondary">0.95 ms</span></td>
-<td><span class="badge badge-success">745 bytes</span><br><span class="badge badge-secondary">1.99 ms</span></td>
-<td><span class="badge badge-secondary">747 bytes</span><br><span class="badge badge-secondary">3.65 ms</span></td>
-<td><span class="badge badge-danger">773 bytes</span><br><span class="badge badge-danger">4.1 ms</span></td>
-<td><span class="badge badge-secondary">747 bytes</span><br><span class="badge badge-secondary">1.73 ms</span></td>
-<td><span class="badge badge-danger">773 bytes</span><br><span class="badge badge-success">0.23 ms</span></td>
-<td><span class="badge badge-danger">773 bytes</span><br><span class="badge badge-secondary">0.63 ms</span></td>
+<td><span class="badge badge-danger">773 bytes</span><br><span class="badge badge-secondary">0.96 ms</span></td>
+<td><span class="badge badge-danger">773 bytes</span><br><span class="badge badge-secondary">3 ms</span></td>
+<td><span class="badge badge-success">745 bytes</span><br><span class="badge badge-secondary">2.51 ms</span></td>
+<td><span class="badge badge-secondary">747 bytes</span><br><span class="badge badge-secondary">2.36 ms</span></td>
+<td><span class="badge badge-danger">773 bytes</span><br><span class="badge badge-danger">6.33 ms</span></td>
+<td><span class="badge badge-secondary">747 bytes</span><br><span class="badge badge-secondary">2.22 ms</span></td>
+<td><span class="badge badge-danger">773 bytes</span><br><span class="badge badge-success">0.35 ms</span></td>
+<td><span class="badge badge-danger">773 bytes</span><br><span class="badge badge-secondary">0.72 ms</span></td>
 </tr>
 <tr>
-<td>tailwind.css - <em>767977 bytes</em></td>
-<td><span class="badge badge-danger">549404 bytes</span><br><span class="badge badge-secondary">356.75 ms</span></td>
-<td><span class="badge badge-secondary">549074 bytes</span><br><span class="badge badge-secondary">325.82 ms</span></td>
-<td><span class="badge badge-secondary">522626 bytes</span><br><span class="badge badge-danger">11354.23 ms</span></td>
-<td><span class="badge badge-secondary">522644 bytes</span><br><span class="badge badge-secondary">9042.83 ms</span></td>
-<td><span class="badge badge-secondary">548758 bytes</span><br><span class="badge badge-secondary">1364.66 ms</span></td>
-<td><span class="badge badge-success">504636 bytes</span><br><span class="badge badge-secondary">335.41 ms</span></td>
-<td><span class="badge badge-secondary">549400 bytes</span><br><span class="badge badge-success">103.14 ms</span></td>
-<td><span class="badge badge-secondary">549282 bytes</span><br><span class="badge badge-secondary">312.74 ms</span></td>
+<td>tailwind.css - <em>721118 bytes</em></td>
+<td><span class="badge badge-danger">549404 bytes</span><br><span class="badge badge-secondary">490.78 ms</span></td>
+<td><span class="badge badge-secondary">549074 bytes</span><br><span class="badge badge-secondary">662.99 ms</span></td>
+<td><span class="badge badge-secondary">522626 bytes</span><br><span class="badge badge-danger">12463.61 ms</span></td>
+<td><span class="badge badge-secondary">522644 bytes</span><br><span class="badge badge-secondary">8638.43 ms</span></td>
+<td><span class="badge badge-secondary">548758 bytes</span><br><span class="badge badge-secondary">1979.95 ms</span></td>
+<td><span class="badge badge-success">504636 bytes</span><br><span class="badge badge-secondary">580.49 ms</span></td>
+<td><span class="badge badge-secondary">549400 bytes</span><br><span class="badge badge-success">171.5 ms</span></td>
+<td><span class="badge badge-secondary">549282 bytes</span><br><span class="badge badge-secondary">382.84 ms</span></td>
 </tr>
 </tbody>
 </table>
+</div>
+<footer class="text-muted pt-2 pb-3">Page generated on <time datetime="2019-11-06T14:39:05.336Z">Wed, 06 Nov 2019 14:39:05 GMT</time></footer>
 </div>
 </body>
 </html>
