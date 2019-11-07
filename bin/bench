@@ -2,7 +2,7 @@
 
 const fs = require('fs');
 const processOutput = require('../lib/process-output');
-const bench = require('../lib/bench');
+const bench = require('../lib');
 
 // ARGUMENTS
 const only = process.argv.includes('--only') ?

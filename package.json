@@ -27,7 +27,7 @@
   "bin": {
     "css-minification-benchmark": "bin/bench"
   },
-  "main": "lib/bench.js",
+  "main": "lib/index.js",
   "dependencies": {},
   "devDependencies": {
     "clean-css": "^4.2.1",
