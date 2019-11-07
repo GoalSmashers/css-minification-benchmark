@@ -38,10 +38,6 @@ Please make sure your file does not contain any special comments (`/*! ... */`) 
 * `clean-css` is configurable, but leaves all by default
 * `csso` always leaves one
 
-### Can I get the total size and time for my CSS files?
-
-Copy all your files to the `data` directory like before and run the benchmark with `--total`.
-
 ### How can I add a new minifier to the list?
 
 * add it to `package.json` as a `devDependency`
