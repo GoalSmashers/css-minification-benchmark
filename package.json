@@ -30,9 +30,9 @@
   "main": "lib/index.js",
   "dependencies": {},
   "devDependencies": {
+    "chalk": "^2.4.2",
     "clean-css": "^4.2.1",
     "cli-table": "^0.3.1",
-    "colors": "^1.4.0",
     "crass": "^0.12.3",
     "cssnano": "^4.1.10",
     "cssnano-preset-advanced": "^4.0.7",
@@ -51,12 +51,10 @@
     "rules": {
       "capitalized-comments": "off",
       "curly": "off",
-      "import/no-unassigned-import": "off",
       "new-cap": "off",
       "no-eq-null": "off",
       "no-mixed-operators": "off",
       "no-negated-condition": "off",
-      "no-restricted-modules": "off",
       "no-unused-vars": [
         "error",
         {
