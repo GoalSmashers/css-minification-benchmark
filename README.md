@@ -23,11 +23,11 @@ Most of the time `crass` comes first although `clean-css`, `cssnano` and `csso` 
 
 Clone the repository, install the dependencies with `npm install` and then run `node ./bin/bench`. That's it!
 
-If you prefer to see results without cloning the repo here are [the most recent ones](https://goalsmashers.github.io/css-minification-benchmark/).
+If you prefer to see results without cloning the repository [here](https://goalsmashers.github.io/css-minification-benchmark/) are the most recent ones.
 
-### How can I generate the html report?
+### How can I generate the HTML report?
 
-Just run `node ./bin/bench --html > report.html`
+Just run `npm run bench-html`
 
 ### How can I test my CSS file?
 
@@ -47,7 +47,7 @@ Copy all your files to the `data` directory like before and run the benchmark wi
 * add it to `package.json` as a `devDependency`
 * run `npm install`
 * require it in `lib/minify.js` and add it to `minifiers` hash
-* run `npm run bench`
+* run `npm run bench-html`
 * add it to this file in "Which engines are covered?" section above
 * send a PR (if you wish to have it included)
 
@@ -57,7 +57,7 @@ Just run `node ./bin/bench --only csso,cssnano` (it's turned into `/.*(csso|cssn
 
 ### Can I get the compressed gzip size as well?
 
-Run `node ./bin/bench --gzip` to measure the gzip size instead of the regular file size.
+Run `npm run bench -- --gzip` to measure the gzip size instead of the regular file size.
 
 ## License
 
