@@ -30,7 +30,7 @@
   "main": "lib/index.js",
   "dependencies": {},
   "devDependencies": {
-    "chalk": "^2.4.2",
+    "chalk": "^3.0.0",
     "clean-css": "^4.2.1",
     "cli-table": "^0.3.1",
     "crass": "^0.12.3",
