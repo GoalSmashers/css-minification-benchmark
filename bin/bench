@@ -9,10 +9,9 @@ const only = process.argv.includes('--only') ?
   new RegExp(`.*(${process.argv[process.argv.indexOf('--only') + 1].replace(/,/g, '|')}).*`) :
   /.+/;
 const asHTML = process.argv.includes('--html');
-const total = process.argv.includes('--total');
 const gzip = process.argv.includes('--gzip');
-const output = processOutput.getOutput(asHTML, gzip, total);
+const output = processOutput.getOutput(asHTML, gzip);
 
 const input = fs.readdirSync('data');
 
-bench({ only, asHTML, total, gzip }, input, output);
+bench({ only, asHTML, gzip }, input, output);
