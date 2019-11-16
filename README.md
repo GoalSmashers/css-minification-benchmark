@@ -52,4 +52,4 @@ Run `node ./bin/bench --gzip` to measure the gzip size instead of the regular fi
 
 ## License
 
-css-minification-benchmark is released under the [MIT License](https://github.com/GoalSmashers/clean-css/blob/master/LICENSE).
+css-minification-benchmark is released under the [MIT License](https://github.com/GoalSmashers/css-minification-benchmark/blob/master/LICENSE).
