@@ -33,11 +33,6 @@ Just run `node ./bin/bench --html > report.html`
 
 Just copy your file to the `data` directory (make sure the filename ends with `.css`) and re-run the benchmark.
 
-Please make sure your file does not contain any special comments (`/*! ... */`) since not all minifiers strip them correctly:
-
-* `clean-css` is configurable, but leaves all by default
-* `csso` always leaves one
-
 ### How can I add a new minifier to the list?
 
 * add it to `package.json` as a `devDependency`
