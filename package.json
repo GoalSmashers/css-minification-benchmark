@@ -31,7 +31,7 @@
   "dependencies": {},
   "devDependencies": {
     "chalk": "^3.0.0",
-    "clean-css": "^4.2.1",
+    "clean-css": "^4.2.3",
     "crass": "^0.12.3",
     "cssnano": "^4.1.10",
     "cssnano-preset-advanced": "^4.0.7",
@@ -39,7 +39,7 @@
     "gzip-size": "^5.1.1",
     "q": "^1.5.1",
     "table": "^5.4.6",
-    "xo": "^0.25.3"
+    "xo": "^0.26.1"
   },
   "engines": {
     "node": ">=10"
