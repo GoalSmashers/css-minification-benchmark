@@ -13,7 +13,6 @@ A comparison of CSS minification engines.
 * [crass](https://github.com/mattbasta/crass)
 * [cssnano](https://github.com/ben-eb/cssnano)
 * [csso](https://github.com/css/csso)
-* [csswring](https://github.com/hail2u/node-csswring)
 
 ### What are the results?
 
