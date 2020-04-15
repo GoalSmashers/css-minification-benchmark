@@ -10,13 +10,8 @@ A comparison of CSS minification engines.
 ### Which engines are covered?
 
 * [clean-css](https://github.com/GoalSmashers/clean-css)
-* [crass](https://github.com/mattbasta/crass)
 * [cssnano](https://github.com/ben-eb/cssnano)
 * [csso](https://github.com/css/csso)
-
-### What are the results?
-
-Most of the time `crass` comes first although `clean-css`, `cssnano` and `csso` come close. Test the minifiers with your CSS to find what works best for you.
 
 ### How can I see the results?
 
