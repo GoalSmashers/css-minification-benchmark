@@ -38,7 +38,7 @@
     "gzip-size": "^5.1.1",
     "q": "^1.5.1",
     "table": "^5.4.6",
-    "xo": "^0.29.0"
+    "xo": "^0.32.0"
   },
   "engines": {
     "node": ">=10"
@@ -76,7 +76,9 @@
       ],
       "spaced-comment": "off",
       "unicorn/explicit-length-check": "off",
-      "unicorn/filename-case": "off"
+      "unicorn/filename-case": "off",
+      "unicorn/no-fn-reference-in-iterator": "off",
+      "unicorn/prefer-optional-catch-binding": "off"
     }
   }
 }
