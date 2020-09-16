@@ -1,4 +1,4 @@
-[![Build Status](https://github.com/GoalSmashers/css-minification-benchmark/workflows/Tests/badge.svg)](https://github.com/GoalSmashers/css-minification-benchmark/actions?workflow=Tests)
+[![Build Status](https://github.com/GoalSmashers/css-minification-benchmark/workflows/CI/badge.svg)](https://github.com/GoalSmashers/css-minification-benchmark/actions?workflow=CI)
 [![devDependency Status](https://img.shields.io/david/dev/GoalSmashers/css-minification-benchmark.svg)](https://david-dm.org/GoalSmashers/css-minification-benchmark?type=dev)
 
 ## What is css-minification-benchmark?
