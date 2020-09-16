@@ -30,15 +30,15 @@
   "main": "lib/index.js",
   "dependencies": {},
   "devDependencies": {
-    "chalk": "^4.0.0",
+    "chalk": "^4.1.0",
     "clean-css": "^4.2.3",
     "cssnano": "^4.1.10",
     "cssnano-preset-advanced": "^4.0.7",
     "csso": "^4.0.3",
     "gzip-size": "^5.1.1",
     "q": "^1.5.1",
-    "table": "^5.4.6",
-    "xo": "^0.32.0"
+    "table": "^6.0.3",
+    "xo": "^0.33.1"
   },
   "engines": {
     "node": ">=10"
