@@ -34,11 +34,11 @@
     "clean-css": "^4.2.3",
     "cssnano": "^4.1.10",
     "cssnano-preset-advanced": "^4.0.7",
-    "csso": "^4.0.3",
-    "gzip-size": "^5.1.1",
+    "csso": "^4.2.0",
+    "gzip-size": "^6.0.0",
     "q": "^1.5.1",
-    "table": "^6.0.3",
-    "xo": "^0.33.1"
+    "table": "^6.0.4",
+    "xo": "^0.35.0"
   },
   "engines": {
     "node": ">=10"
