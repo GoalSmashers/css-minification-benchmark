@@ -37,8 +37,8 @@
     "csso": "^4.2.0",
     "gzip-size": "^6.0.0",
     "q": "^1.5.1",
-    "table": "^6.0.4",
-    "xo": "^0.35.0"
+    "table": "^6.0.7",
+    "xo": "^0.37.1"
   },
   "engines": {
     "node": ">=10"
@@ -77,7 +77,7 @@
       "spaced-comment": "off",
       "unicorn/explicit-length-check": "off",
       "unicorn/filename-case": "off",
-      "unicorn/no-fn-reference-in-iterator": "off",
+      "unicorn/no-array-callback-reference": "off",
       "unicorn/prefer-optional-catch-binding": "off"
     }
   }
