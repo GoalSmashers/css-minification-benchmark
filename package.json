@@ -31,7 +31,7 @@
   "dependencies": {},
   "devDependencies": {
     "chalk": "^4.1.0",
-    "clean-css": "^4.2.3",
+    "clean-css": "^5.0.1",
     "cssnano": "^4.1.10",
     "cssnano-preset-advanced": "^4.0.7",
     "csso": "^4.2.0",
