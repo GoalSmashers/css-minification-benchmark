@@ -19,13 +19,13 @@
     "benchmark"
   ],
   "scripts": {
-    "bench": "node ./bin/bench --html>docs/index.html",
+    "bench": "node ./bin/bench.js --html>docs/index.html",
     "check": "npm run lint",
     "lint": "xo",
     "test": "npm run lint && npm run bench"
   },
   "bin": {
-    "css-minification-benchmark": "bin/bench"
+    "css-minification-benchmark": "bin/bench.js"
   },
   "main": "lib/index.js",
   "dependencies": {},

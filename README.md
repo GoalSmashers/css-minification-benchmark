@@ -15,13 +15,13 @@ A comparison of CSS minification engines.
 
 ### How can I see the results?
 
-Clone the repository, install the dependencies with `npm install` and then run `node ./bin/bench`. That's it!
+Clone the repository, install the dependencies with `npm install` and then run `node ./bin/bench.js`. That's it!
 
 If you prefer to see results without cloning the repo here are [the most recent ones](https://goalsmashers.github.io/css-minification-benchmark/).
 
 ### How can I generate the html report?
 
-Just run `node ./bin/bench --html > report.html`
+Just run `node ./bin/bench.js --html > report.html`
 
 ### How can I test my CSS file?
 
@@ -38,11 +38,11 @@ Just copy your file to the `data` directory (make sure the filename ends with `.
 
 ### How can I compare a subset of minifiers?
 
-Just run `node ./bin/bench --only csso,cssnano` (it's turned into `/.*(csso|cssnano).*/` regex)
+Just run `node ./bin/bench.js --only csso,cssnano` (it's turned into `/.*(csso|cssnano).*/` regex)
 
 ### Can I get the compressed gzip size as well?
 
-Run `node ./bin/bench --gzip` to measure the gzip size instead of the regular file size.
+Run `node ./bin/bench.js --gzip` to measure the gzip size instead of the regular file size.
 
 ## License
 
