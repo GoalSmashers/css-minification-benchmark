@@ -50,24 +50,11 @@
       "capitalized-comments": "off",
       "curly": "off",
       "new-cap": "off",
-      "no-eq-null": "off",
       "no-mixed-operators": "off",
       "no-negated-condition": "off",
-      "no-unused-vars": [
-        "error",
-        {
-          "caughtErrors": "none"
-        }
-      ],
       "object-curly-spacing": [
         "error",
         "always"
-      ],
-      "prefer-const": [
-        "error",
-        {
-          "ignoreReadBeforeAssign": true
-        }
       ],
       "promise/prefer-await-to-then": "off",
       "quote-props": [
@@ -76,9 +63,7 @@
       ],
       "spaced-comment": "off",
       "unicorn/explicit-length-check": "off",
-      "unicorn/filename-case": "off",
-      "unicorn/no-array-callback-reference": "off",
-      "unicorn/prefer-optional-catch-binding": "off"
+      "unicorn/filename-case": "off"
     }
   }
 }
