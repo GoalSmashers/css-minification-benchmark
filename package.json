@@ -32,10 +32,11 @@
   "devDependencies": {
     "chalk": "^4.1.0",
     "clean-css": "^5.1.2",
-    "cssnano": "^4.1.10",
-    "cssnano-preset-advanced": "^4.0.7",
+    "cssnano": "^5.0.2",
+    "cssnano-preset-advanced": "^5.0.0",
     "csso": "^4.2.0",
     "gzip-size": "^6.0.0",
+    "postcss": "^8.2.14",
     "q": "^1.5.1",
     "table": "^6.0.7",
     "xo": "^0.38.2"
