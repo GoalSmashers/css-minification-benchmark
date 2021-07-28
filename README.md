@@ -12,6 +12,7 @@ A comparison of CSS minification engines.
 * [clean-css](https://github.com/GoalSmashers/clean-css)
 * [cssnano](https://github.com/ben-eb/cssnano)
 * [csso](https://github.com/css/csso)
+* [esbuild](https://github.com/evanw/esbuild)
 
 ### How can I see the results?
 
