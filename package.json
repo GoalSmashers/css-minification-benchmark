@@ -30,31 +30,41 @@
   "main": "lib/index.js",
   "dependencies": {},
   "devDependencies": {
-    "chalk": "^4.1.0",
-    "clean-css": "^5.1.2",
-    "cssnano": "^4.1.10",
-    "cssnano-preset-advanced": "^4.0.7",
+    "chalk": "^4.1.1",
+    "clean-css": "^5.1.4",
+    "cssnano": "^4.1.11",
+    "cssnano-preset-advanced": "^4.0.8",
     "csso": "^4.2.0",
     "gzip-size": "^6.0.0",
     "q": "^1.5.1",
-    "table": "^6.0.7",
-    "xo": "^0.38.2"
+    "table": "^6.7.1",
+    "xo": "^0.42.0"
   },
   "engines": {
-    "node": ">=10"
+    "node": ">=12"
   },
   "xo": {
     "esnext": true,
     "space": true,
     "rules": {
+      "arrow-body-style": "off",
       "capitalized-comments": "off",
+      "comma-dangle": [
+        "error",
+        "never"
+      ],
       "curly": "off",
+      "import/extensions": "off",
       "new-cap": "off",
       "no-mixed-operators": "off",
       "no-negated-condition": "off",
       "object-curly-spacing": [
         "error",
         "always"
+      ],
+      "operator-linebreak": [
+        "error",
+        "after"
       ],
       "promise/prefer-await-to-then": "off",
       "quote-props": [
@@ -64,7 +74,8 @@
       "spaced-comment": "off",
       "unicorn/explicit-length-check": "off",
       "unicorn/filename-case": "off",
-      "unicorn/no-array-for-each": "off"
+      "unicorn/no-array-for-each": "off",
+      "unicorn/prefer-module": "off"
     }
   }
 }
