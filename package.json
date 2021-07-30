@@ -19,7 +19,8 @@
     "benchmark"
   ],
   "scripts": {
-    "bench": "node ./bin/bench.js --html>docs/index.html",
+    "bench": "node ./bin/bench.js",
+    "bench-html": "node ./bin/bench.js --html>docs/index.html",
     "check": "npm run lint",
     "lint": "xo",
     "test": "npm run lint && npm run bench"
