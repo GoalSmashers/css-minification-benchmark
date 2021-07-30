@@ -1,8 +1,10 @@
 #!/usr/bin/env node
 
+'use strict';
+
 const fs = require('fs');
-const processOutput = require('../lib/process-output');
-const bench = require('../lib');
+const processOutput = require('../lib/process-output.js');
+const bench = require('../lib/index.js');
 
 // ARGUMENTS
 const only = process.argv.includes('--only') ?

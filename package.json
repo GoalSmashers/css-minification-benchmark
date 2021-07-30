@@ -46,7 +46,6 @@
     "node": ">=12"
   },
   "xo": {
-    "esnext": true,
     "space": true,
     "rules": {
       "arrow-body-style": "off",
@@ -55,11 +54,7 @@
         "error",
         "never"
       ],
-      "curly": "off",
-      "import/extensions": "off",
       "new-cap": "off",
-      "no-mixed-operators": "off",
-      "no-negated-condition": "off",
       "object-curly-spacing": [
         "error",
         "always"
@@ -74,9 +69,6 @@
         "consistent"
       ],
       "spaced-comment": "off",
-      "unicorn/explicit-length-check": "off",
-      "unicorn/filename-case": "off",
-      "unicorn/no-array-for-each": "off",
       "unicorn/prefer-module": "off"
     }
   }
