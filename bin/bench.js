@@ -3,7 +3,7 @@
 'use strict';
 
 const fs = require('fs');
-const processOutput = require('../lib/process-output.js');
+const { processOutput } = require('../lib/process-output.js');
 const bench = require('../lib/index.js');
 
 // ARGUMENTS
@@ -12,7 +12,7 @@ const only = process.argv.includes('--only') ?
   /.+/;
 const asHTML = process.argv.includes('--html');
 const gzip = process.argv.includes('--gzip');
-const output = processOutput.getOutput(asHTML, gzip);
+const output = processOutput(asHTML, gzip);
 
 const input = fs.readdirSync('data');
 
