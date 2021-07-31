@@ -20,7 +20,8 @@
   ],
   "scripts": {
     "bench": "node ./bin/bench.js",
-    "bench-html": "node ./bin/bench.js --html>docs/index.html",
+    "bench-html": "node ./bin/bench.js --html --gzip>docs/index.html",
+    "bench-html-uncompressed": "node ./bin/bench.js --html>docs/index-uncompressed.html",
     "check": "npm run lint",
     "lint": "xo",
     "test": "npm run lint && npm run bench"
