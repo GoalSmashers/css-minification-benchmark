@@ -3,6 +3,7 @@
 'use strict';
 
 const fs = require('fs');
+const process = require('process');
 const { processOutput } = require('../lib/process-output.js');
 const bench = require('../lib/index.js');
 
