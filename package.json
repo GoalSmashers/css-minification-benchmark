@@ -31,6 +31,7 @@
   "main": "lib/index.js",
   "dependencies": {},
   "devDependencies": {
+    "@parcel/css": "^1.0.1",
     "clean-css": "^5.2.2",
     "cssnano": "^5.0.15",
     "cssnano-preset-advanced": "^5.1.10",
