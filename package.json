@@ -40,7 +40,6 @@
     "gzip-size": "^6.0.0",
     "picocolors": "^1.0.0",
     "postcss": "^8.4.5",
-    "q": "^1.5.1",
     "table": "^6.8.0",
     "xo": "^0.47.0"
   },
@@ -66,7 +65,7 @@
         "error",
         "after"
       ],
-      "promise/prefer-await-to-then": "off",
+      "no-await-in-loop": "off",
       "quote-props": [
         "error",
         "consistent"
