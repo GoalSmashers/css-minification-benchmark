@@ -29,15 +29,14 @@
     "css-minification-benchmark": "bin/bench.js"
   },
   "main": "lib/index.js",
-  "dependencies": {},
   "devDependencies": {
-    "@parcel/css": "^1.0.1",
     "clean-css": "^5.2.2",
     "cssnano": "^5.0.15",
     "cssnano-preset-advanced": "^5.1.10",
     "csso": "^5.0.2",
     "esbuild": "^0.14.11",
     "gzip-size": "^6.0.0",
+    "lightningcss": "^1.17.1",
     "picocolors": "^1.0.0",
     "postcss": "^8.4.5",
     "q": "^1.5.1",

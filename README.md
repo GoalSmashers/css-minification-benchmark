@@ -12,6 +12,7 @@ A comparison of CSS minification engines.
 * [cssnano](https://github.com/ben-eb/cssnano)
 * [csso](https://github.com/css/csso)
 * [esbuild](https://github.com/evanw/esbuild)
+* [lightningcss](https://github.com/parcel-bundler/lightningcss)
 
 ### How can I see the results?
 
